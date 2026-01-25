@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por tu gotita! - Gotas de Limonada</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-principal: #2e5a31; /* Ajusta a tu verde exacto */
+            --color-fondo: #f9f9f9;
+        }
+
+        body {
+            background-color: var(--color-fondo);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .contenedor-gracias {
+            background: white;
+            padding: 50px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 20px;
+        }
+
+        h1 {
+            font-family: 'Architects Daughter', cursive;
+            color: var(--color-principal);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: 'Indie Flower', cursive;
+            font-size: 1.6rem;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .limon {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .boton-volver {
+            margin-top: 30px;
+            display: inline-block;
+            text-decoration: none;
+            background-color: var(--color-principal);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-family: 'Architects Daughter', cursive;
+            transition: transform 0.3s;
+        }
+
+        .boton-volver:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-gracias">
+        <span class="limon">🍋</span>
+        <h1>¡Gracias por tu gotita!</h1>
+        <p>
+            "Tu mensaje ha llegado a nuestra jarra. En un mundo que a veces puede ser un poco ácido, 
+            gestos como el tuyo son los que añaden el dulzor necesario para seguir adelante."
+        </p>
+        <a href="index.html" class="boton-volver">Volver al refugio</a>
+    </div>
+
+</body>
+</html>

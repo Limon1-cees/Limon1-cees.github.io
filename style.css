@@ -1,0 +1,180 @@
+/* Variables de colores */
+:root {
+    --color-principal: #2d6a4f; /* Verde Bosque */
+    --color-acento: #d4af37;    /* Dorado */
+    --fondo-pagina: #b39e83;    /* Crema suave */
+
+}
+
+h1 {
+  font-family: "Architects Daughter", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;color: antiquewhite;
+   background-color:#305544
+   
+}
+
+p {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;color: #d6cdc0;
+  background-color:#305544
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: var(--fondo-pagina);
+    color: #333;
+}
+
+head {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--color-acento);
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--color-principal);
+    margin-bottom: 30px;
+}
+
+/* Galería de Ideas */
+.ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.idea-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.idea-card:hover {
+    transform: translateY(-10px);
+}
+
+.idea-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.idea-content {
+    padding: 20px;
+}
+
+.idea-content h3 {
+    margin: 0 0 10px 0;
+    color: var(--color-principal);
+}
+
+/* Formulario */
+.form-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--color-acento);
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--color-principal);
+    color: white;
+}
+
+
+.donation-box {
+    background: #fff;
+    border: 2px dashed var(--color-acento);
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+.btn-donar {
+    background-color: var(--color-acento);
+    color: black;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    display: inline-block;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-donar:hover {
+    transform: scale(1.05);
+    background-color: #b8962d;
+}
+
+section {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.boton {
+    display: inline-block; /* clave para que width funcione */
+    background-color: var(--color-principal);
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}

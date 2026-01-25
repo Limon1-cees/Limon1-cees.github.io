@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gotitas de Limonada</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+    <h1>El Santuario del Caballero</h1>
+    <p>Porque ellos también merecen ser cuidados, amados y celebrados.</p>
+</head>
+<body>
+
+
+<div class="container">
+
+    <section style="background-color: #cac2bb; padding: 40px 20px; text-align: center; border-radius: 15px; box-shadow: 0 4px 10px rgba(221, 210, 210, 0.05); margin-bottom: 30px;">
+    <h2 style="color: var(--color-principal); font-size: 2.2rem; font-family: 'Architects Daughter', cursive; margin-top: 0;">
+        Un Espacio Para Ti
+    </h2>
+    
+    <p style="font-size: 1.4rem; color: #fffefe; max-width: 750px; margin: 0 auto; line-height: 1.6; font-family: 'Indie Flower', cursive;">
+        Bienvenido a un refugio diseñado para el hombre que cuida, que trabaja, que ama y que, muchas veces, lo hace en silencio. <br><br>
+        Vivimos en un mundo que suele exigirles fortaleza inquebrantable, pero aquí sabemos que tú también mereces ser el centro de los detalles, recibir un abrazo que te sostenga y ser celebrado sin motivo especial. Este es un espacio para romper con la humillación y el olvido; un santuario donde tu sensibilidad es un valor, no una debilidad.<br><br>
+        Si eres hombre, entra y siéntete en casa: aquí tu voz importa. Si amas a un hombre, descubre cómo devolverle un poco de toda la luz que él entrega día a día. Porque el amor y el reconocimiento también llevan nombre masculino."
+    </p>
+</section>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <h2>Ideas para Sorprenderlo</h2>
+    <div class="ideas-grid">
+        <div class="idea-card">
+            <img src="https://images.unsplash.com/photo-1520004434532-668416a08753?q=80&w=500" alt="Carta">
+            <div class="idea-content">
+                <h3>Notas de Admiración</h3>
+                <p>
+                    
+                Una carta escrita a mano es un tesoro emocional inolvidable
+                 <a href="notasAdmiracion.html" class="boton" target="_blank">Ver más.</a>
+    
+
+                </p>
+            </div>
+        </div>
+        
+        <div class="idea-card">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=500" alt="Spa">
+            <div class="idea-content">
+                <h3>Cuidado Personal</h3>
+                <p>
+                    Un kit de relajación porque su paz mental también es prioridad
+                  <a href="cuidadoPersonal.html" class="boton" target="_blank"> Ver más.</a>   
+                   
+                
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+</div>
+
+<div class="form-section">
+    <h2>¿Quieres dejar un mensaje?</h2>
+
+    <form 
+        action="https://formsubmit.co/limonada.reptar@hotmail.com" 
+        method="POST"
+    >
+        <!-- Configuración FormSubmit -->
+        <input type="hidden" name="_next" value="https://gotasdelimonada.netlify.app/ ">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde la jarra">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
+
+        <!-- Campos visibles -->
+        <input 
+            type="text" 
+            name="Nombre" 
+            placeholder="Tu nombre" 
+            required
+        >
+
+        <textarea 
+            name="Mensaje" 
+            placeholder="Escribe aquí..." 
+            required
+        ></textarea>
+
+        <button type="submit">Enviar a la jarra</button>
+       
+    </form>
+
+    
+</div>
+
+<div class="donation-box">
+    <h3>¿Te gustaría ser una gotita de Limonada?</h3>
+    <p>Tus donaciones nos ayudan a mantener este espacio libre de juicios y a seguir reconociendo el valor de los hombres.</p>
+    <a href="https://mpago.li/link.mercadopago.com.mx/gotitasdelimonada" class="btn-donar" target="_blank">
+        💝 Donar con Mercado Pago
+    </a>
+</div>
+
+<footer>
+    <p>Gotas De Limonada &copy; 2026</p>
+</footer>
+
+<script>
+    document.getElementById('mensajeForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Mensaje enviado con éxito.');
+        this.reset();
+    });
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
