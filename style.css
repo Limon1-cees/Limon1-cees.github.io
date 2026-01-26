@@ -25,6 +25,12 @@ body {
     
 }
 
+ .gracias{
+    background-color: var(--color-fondo);
+    background-image: url(/gracias.png);
+    }
+
+
 /* Nota: Cambié 'head' por 'header' que es la etiqueta correcta */
 header {
     background-color: #0a0a0a;
