@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por tu gotita! - Gotas de Limonada</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-principal: #2e5a31; /* El verde de tu santuario */
+            --color-limon: #FFF176;
+            --fondo: #fdfcf0;
+        }
+
+        body {
+            background-color: var(--fondo);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Indie Flower', cursive;
+            overflow: hidden;
+        }
+
+        .tarjeta-gracias {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 500px;
+            margin: 20px;
+            border: 2px solid var(--color-limon);
+            position: relative;
+        }
+
+        /* Pequeño detalle de limón decorativo */
+        .tarjeta-gracias::after {
+            content: '🍋';
+            font-size: 2rem;
+            position: absolute;
+            top: -20px;
+            right: -10px;
+            transform: rotate(15deg);
+        }
+
+        h1 {
+            font-family: 'Architects Daughter', cursive;
+            color: var(--color-principal);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .firma {
+            font-size: 1.1rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        .boton-volver {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: var(--color-principal);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(46, 90, 49, 0.2);
+        }
+
+        .boton-volver:hover {
+            transform: scale(1.05);
+            background-color: #1e3d21;
+        }
+
+        /* Animación suave al entrar */
+        .tarjeta-gracias {
+            animation: aparecer 0.8s ease-out;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tarjeta-gracias">
+        <h1>¡Gracias por tu gotita! ✨</h1>
+        
+        <p>
+            "Tu mensaje ha llegado a nuestra jarra. En un mundo que a veces puede ser un poco ácido, 
+            gestos como el tuyo son los que añaden el dulzor necesario para seguir adelante."
+        </p>
+
+        <div class="firma">
+            Tu voz ya es parte de este refugio.
+        </div>
+
+        <a href="index.html" class="boton-volver">Volver al inicio</a>
+    </div>
+
+</body>
+</html>
