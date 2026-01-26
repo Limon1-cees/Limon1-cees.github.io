@@ -60,6 +60,7 @@ p {
     color: #dcd6f7; /* Blanco lila */
     background-color: transparent;
     line-height: 1.6;
+    text-shadow: 0px 2px 2px #000000, 0px -2px 2px #000000, 2px 0px 2px #000000, -2px -0px 2px #000000, 0px 0px 2px #000000, 2px 0px 5px #000000, -2px -0px 5px #030a00, 0px 0px 5px #000100;
 }
 
 h2 {
