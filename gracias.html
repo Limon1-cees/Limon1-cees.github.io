@@ -11,27 +11,42 @@
 
     <style>
         :root {
-            --color-principal: #2e5a31; /* Ajusta a tu verde exacto */
-            --color-fondo: #f9f9f9;
+            --color-principal: #2e5a31; /* El verde de tu santuario */
+            --color-limon: #FFF176;
+            --fondo: #fdfcf0;
         }
 
         body {
-            background-color: var(--color-fondo);
+            background-color: var(--fondo);
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            text-align: center;
+            font-family: 'Indie Flower', cursive;
+            overflow: hidden;
         }
 
-        .contenedor-gracias {
+        .tarjeta-gracias {
             background: white;
-            padding: 50px 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            max-width: 600px;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 500px;
             margin: 20px;
+            border: 2px solid var(--color-limon);
+            position: relative;
+        }
+
+        /* Pequeño detalle de limón decorativo */
+        .tarjeta-gracias::after {
+            content: '🍋';
+            font-size: 2rem;
+            position: absolute;
+            top: -20px;
+            right: -10px;
+            transform: rotate(15deg);
         }
 
         h1 {
@@ -42,45 +57,63 @@
         }
 
         p {
-            font-family: 'Indie Flower', cursive;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: #444;
             line-height: 1.6;
+            margin-bottom: 30px;
         }
 
-        .limon {
-            font-size: 4rem;
-            margin-bottom: 10px;
-            display: block;
+        .firma {
+            font-size: 1.1rem;
+            color: #888;
+            font-style: italic;
         }
 
         .boton-volver {
-            margin-top: 30px;
             display: inline-block;
+            margin-top: 20px;
             text-decoration: none;
             background-color: var(--color-principal);
             color: white;
-            padding: 12px 25px;
+            padding: 12px 30px;
             border-radius: 25px;
             font-family: 'Architects Daughter', cursive;
-            transition: transform 0.3s;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(46, 90, 49, 0.2);
         }
 
         .boton-volver:hover {
             transform: scale(1.05);
+            background-color: #1e3d21;
+        }
+
+        /* Animación suave al entrar */
+        .tarjeta-gracias {
+            animation: aparecer 0.8s ease-out;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
-    <div class="contenedor-gracias">
-        <span class="limon">🍋</span>
-        <h1>¡Gracias por tu gotita!</h1>
+    <div class="tarjeta-gracias">
+        <h1>¡Gracias por tu gotita! ✨</h1>
+        
         <p>
             "Tu mensaje ha llegado a nuestra jarra. En un mundo que a veces puede ser un poco ácido, 
             gestos como el tuyo son los que añaden el dulzor necesario para seguir adelante."
         </p>
-        <a href="index.html" class="boton-volver">Volver al refugio</a>
+
+        <div class="firma">
+            Tu voz ya es parte de este refugio.
+        </div>
+
+        <a href="index.html" class="boton-volver">Volver al inicio</a>
     </div>
 
 </body>

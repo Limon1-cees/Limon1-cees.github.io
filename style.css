@@ -1,43 +1,71 @@
-/* Variables de colores */
+/* =========================================
+   VARIABLES: PALETA GALÁCTICA
+   (Negro, Morado, Lila, Azul)
+   ========================================= */
 :root {
-    --color-principal: #2d6a4f; /* Verde Bosque */
-    --color-acento: #d4af37;    /* Dorado */
-    --fondo-pagina: #b39e83;    /* Crema suave */
-
+    --color-fondo: #050505;       /* Negro casi puro */
+    --color-principal: #7B2CBF;   /* Morado Intenso */
+    --color-secundario: #9D4EDD;  /* Morado Medio */
+    --color-acento: #00F3FF;      /* Azul Cian Neón (Para resaltar) */
+    --color-lila: #E0AAFF;        /* Lila suave (Para textos) */
+    --color-tarjeta: #100b14;     /* Fondo muy oscuro para tarjetas */
 }
 
-h1 {
-  font-family: "Architects Daughter", cursive;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;color: antiquewhite;
-   background-color:#305544
-   
-}
-
-p {
-  font-family: "Indie Flower", cursive;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;color: #d6cdc0;
-  background-color:#305544
-}
-
+/* =========================================
+   ESTILOS GENERALES
+   ========================================= */
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background-color: var(--fondo-pagina);
-    color: #333;
-}
-
-head {
-    background-color: var(--color-principal);
-    color: white;
-    padding: 40px 20px;
+    background-color: var(--color-fondo);
+    background-image: url(/FondoDePantalla.png);
+    color: var(--color-lila); /* Texto en lila suave */
     text-align: center;
-    border-bottom: 5px solid var(--color-acento);
+    border: 2px solid #CCFF00;
+    
 }
 
+/* Nota: Cambié 'head' por 'header' que es la etiqueta correcta */
+header {
+    background-color: #0a0a0a;
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--color-acento); /* Línea azul neón */
+    background-image: linear-gradient(to bottom, #1a0b2e, #050505);
+}
+
+h1 {
+    font-family: "Architects Daughter", cursive;
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--color-acento); /* Título en Azul Neón */
+    margin: 0;
+    background-color: transparent;
+    border-radius: 0;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5); /* Efecto de brillo */
+}
+
+p {
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #dcd6f7; /* Blanco lila */
+    background-color: transparent;
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    color: var(--color-secundario); /* Morado brillante */
+    margin-bottom: 30px;
+    text-shadow: 0 0 5px rgba(157, 78, 221, 0.4);
+    border: 2px solid #576816;
+}
+
+section {
+    font-family: "Abril Fatface", serif;
+}
 
 .container {
     max-width: 1100px;
@@ -45,36 +73,45 @@ head {
     padding: 20px;
 }
 
-h2 {
-    text-align: center;
-    color: var(--color-principal);
-    margin-bottom: 30px;
-}
-
-/* Galería de Ideas */
+/* =========================================
+   GALERÍA DE IDEAS
+   ========================================= */
 .ideas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
     margin-bottom: 50px;
+    margin: 40px auto;
+    border: 2px solid #576816;
+    background-color: #1a0b2e;
+    font-size: 0%;color: #120420;
+    
 }
 
 .idea-card {
-    background: white;
+    background-color: var(--color-tarjeta);
+    border: 1px solid #2a1a40; /* Borde morado oscuro */
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .idea-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(123, 44, 191, 0.4); /* Resplandor morado */
+    border-color: var(--color-acento);
 }
 
 .idea-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    opacity: 0.85; /* Un poco oscuras para que no lastimen la vista */
+    transition: opacity 0.3s;
+}
+
+.idea-card:hover img {
+    opacity: 1;
 }
 
 .idea-content {
@@ -83,31 +120,49 @@ h2 {
 
 .idea-content h3 {
     margin: 0 0 10px 0;
-    color: var(--color-principal);
+    color: var(--color-lila);
 }
 
-/* Formulario */
+/* =========================================
+   FORMULARIO
+   ========================================= */
 .form-section {
-    background: white;
+    background: linear-gradient(135deg, #120420 0%, #0d0d1a 100%);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     max-width: 700px;
     margin: 40px auto;
+    border: 1px solid #3c1e55;
 }
 
 input, textarea {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
-    border: 1px solid #ddd;
+    background-color: #000;
+    border: 1px solid var(--color-principal);
+    color: white;
     border-radius: 8px;
     box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.1rem;
 }
 
-button {
-    background-color: var(--color-principal);
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-acento); /* Borde azul al escribir */
+    box-shadow: 0 0 8px rgba(0, 243, 255, 0.3);
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+button, .boton {
+    display: inline-block;
+    background-color: var(--color-principal); /* Fondo Morado */
     color: white;
+    text-align: center;
     border: none;
     padding: 15px;
     border-radius: 8px;
@@ -115,66 +170,113 @@ button {
     font-weight: bold;
     width: 100%;
     transition: 0.3s;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
-button:hover {
-    background-color: var(--color-acento);
-    color: black;
+button:hover, .boton:hover {
+    background-color: var(--color-acento); /* Fondo Azul al pasar mouse */
+    color: #000; /* Texto negro para contraste */
+    box-shadow: 0 0 15px var(--color-acento); /* Brillo neón */
 }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    background: var(--color-principal);
-    color: white;
+.boton-volver {
+    width: auto; /* Ajuste para botón de volver */
+    padding: 12px 30px;
 }
 
-
+/* =========================================
+   DONACIONES Y FOOTER
+   ========================================= */
 .donation-box {
-    background: #fff;
+    background: #0d0d0e;
     border: 2px dashed var(--color-acento);
     padding: 30px;
     text-align: center;
     border-radius: 15px;
     margin-top: 40px;
+    color: var(--color-lila);
 }
 
 .btn-donar {
-    background-color: var(--color-acento);
-    color: black;
+    background-color: var(--color-acento); /* Azul */
+    color: #000;
     padding: 15px 30px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 50px;
     display: inline-block;
     transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    margin-top: 15px;
 }
 
 .btn-donar:hover {
     transform: scale(1.05);
-    background-color: #b8962d;
+    background-color: white;
+    box-shadow: 0 0 15px white;
 }
 
-section {
-  font-family: "Abril Fatface", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-
-.boton {
-    display: inline-block; /* clave para que width funcione */
-    background-color: var(--color-principal);
-    text-decoration: none;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
+footer {
     text-align: center;
-    transition: background-color 0.3s, transform 0.2s;
+    padding: 30px;
+    background: #080808;
+    color: var(--color-principal);
+    border-top: 1px solid #1f1f1f;
+}
+
+/* =========================================
+   BOTÓN LIMÓN (Adaptado a la paleta)
+   ========================================= */
+.boton-limon-tiktok {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.boton-limon-tiktok:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.limon-forma {
+    width: 60px;
+    height: 60px;
+    /* He cambiado el limón amarillo por uno "Azul Eléctrico" para que combine */
+    background-color: var(--color-acento); 
+    border: 2px solid #fff;
+    border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(187, 255, 0, 0.4);
+    position: relative;
+}
+
+.limon-forma::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-principal); /* Rabito Morado */
+    border-radius: 50% 0 50% 0;
+}
+
+.limon-forma svg {
+    width: 25px;
+    fill: #000000; /* Logo TikTok en negro */
+}
+
+@media (max-width: 600px) {
+    .boton-limon-tiktok {
+        bottom: 15px;
+        right: 15px;
+    }
+    .limon-forma {
+        width: 50px;
+        height: 50px;
+    }
 }
