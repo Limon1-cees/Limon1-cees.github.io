@@ -31,6 +31,17 @@ body {
     background-size: contain;
 }
 
+.notasAdmiracion{
+    background-color: var(--color-fondo);
+    background-image: url(/cartas.png);
+    background-size: contain;
+}
+
+.cuidadoPersonal{
+    background-color: var(--color-fondo);
+    background-image: url(/cuidadoPersonal.png);
+    background-size: contain;
+}
 
 /* Nota: Cambié 'head' por 'header' que es la etiqueta correcta */
 header {
