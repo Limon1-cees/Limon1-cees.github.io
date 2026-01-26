@@ -28,7 +28,8 @@ body {
  .gracias{
     background-color: var(--color-fondo);
     background-image: url(/gracias.png);
-    }
+    background-size: contain;
+}
 
 
 /* Nota: Cambié 'head' por 'header' que es la etiqueta correcta */
