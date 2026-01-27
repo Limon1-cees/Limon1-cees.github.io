@@ -28,6 +28,43 @@ body {
     
 }
 
+/* --- AJUSTE DE TEXTOS GENERALES --- */
+
+/* Agrandar el Manifiesto de Bienvenida */
+.container p {
+    font-size: 1.4rem; /* Antes era 1.2, ahora es más legible */
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8; /* Más espacio entre líneas para que no se vea amontonado */
+}
+
+/* Títulos de las tarjetas (Notas de Admiración, Cuidado Personal, etc.) */
+.idea-content h3 {
+    font-size: 1.8rem !important; /* Forzamos a que sea más grande */
+    color: var(--color-acento);
+    margin-bottom: 15px;
+}
+
+/* Texto dentro de las tarjetas */
+.idea-content p {
+    font-size: 1.2rem;
+    color: var(--color-lila);
+}
+
+/* Títulos de las secciones (H2) */
+h2 {
+    font-size: 2.5rem;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+/* --- CORRECCIÓN DE POSICIÓN --- */
+header h1 {
+    font-size: 3.5rem; /* El título principal debe ser imponente */
+    margin-top: 20px;
+}
+
 
 
 /* Para que el texto resalte sobre la imagen de fondo */
