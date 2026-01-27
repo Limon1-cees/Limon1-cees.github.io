@@ -18,14 +18,19 @@ body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     background-color: var(--color-fondo);
-    background-image: url(/FondoDePantalla.png);
+    background-image: url(/fondo2.jpg);
     background-attachment: fixed;
     background-position: center;
-    
+    background-size: cover;
     color: var(--color-lila); /* Texto en lila suave */
     text-align: center;
     border: 2px solid #CCFF00;
     
+}
+
+.foto-principal{
+    width: 280px;
+    border-radius: 10px;
 }
 
 /* --- AJUSTE DE TEXTOS GENERALES --- */
@@ -39,12 +44,7 @@ body {
     line-height: 1.8; /* Más espacio entre líneas para que no se vea amontonado */
 }
 
-/* Títulos de las tarjetas (Notas de Admiración, Cuidado Personal, etc.) */
-.idea-content h3 {
-    font-size: 1.8rem !important; /* Forzamos a que sea más grande */
-    color: var(--color-acento);
-    margin-bottom: 15px;
-}
+
 
 /* Texto dentro de las tarjetas */
 .idea-content p {
@@ -52,12 +52,6 @@ body {
     color: var(--color-lila);
 }
 
-/* Títulos de las secciones (H2) */
-h2 {
-    font-size: 2.5rem;
-    margin-top: 40px;
-    margin-bottom: 30px;
-}
 
 /* --- CORRECCIÓN DE POSICIÓN --- */
 header h1 {
@@ -108,7 +102,7 @@ h1 {
     margin: 0;
     background-color: transparent;
     border-radius: 0;
-    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5); /* Efecto de brillo */
+    text-shadow: 0 0 10px rgba(46, 6, 56, 0.7),0 -5px 5px rgba(35, 0, 41, 0.4),-5px 0px 5px rgba(35, 0, 41, 0.4),-5px -5px 5px rgba(38, 0, 45, 0.4),5px 5px 5px rgba(38, 0, 45, 0.4); /* Efecto de brillo */
 }
 
 p {
@@ -122,12 +116,23 @@ p {
     text-shadow: 0px 2px 2px #000000, 0px -2px 2px #000000, 2px 0px 2px #000000, -2px -0px 2px #000000, 0px 0px 2px #000000, 2px 0px 5px #000000, -2px -0px 5px #030a00, 0px 0px 5px #000100;
 }
 
+
+/* Títulos de las secciones (H2) */
 h2 {
     text-align: center;
-    color: var(--color-secundario); /* Morado brillante */
+    color: var(--color-secundario);
+    font-size: 2.2rem;
+    margin-top: 40px;
     margin-bottom: 30px;
-    text-shadow: 0 0 5px rgba(157, 78, 221, 0.4);
+    background: rgba(89, 2, 102, 0.219); 
     border: 2px solid #576816;
+    border-radius: 10px; 
+    padding: 10px;
+    box-shadow: 0 8px 32px 0 rgba(184, 51, 182, 0.37); 
+    text-shadow: 0 0 10px rgba(52, 0, 65, 0.3),0 -5px 5px rgba(35, 0, 41, 0.3),-5px 0px 5px rgba(35, 0, 41, 0.3),-5px -5px 5px rgba(38, 0, 45, 0.3),5px 5px 5px rgba(38, 0, 45, 0.3); /* Efecto de brillo */
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+    font-weight: 700;
 }
 
 section {
@@ -159,8 +164,9 @@ section {
     background: rgba(123, 44, 191, 0.1);
     padding: 30px;
     border-radius: 15px;
+    width: 75%;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    max-width: 700px;
+    max-width: 700px;    
     margin: 50px auto; 
     border: 1px solid rgba(157, 78, 221, 0.2);
     backdrop-filter: blur(5px); 
@@ -174,10 +180,12 @@ section {
 
 .idea-card img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    opacity: 0.85; /* Un poco oscuras para que no lastimen la vista */
+    opacity: 1; /* Un poco oscuras para que no lastimen la vista */
     transition: opacity 0.3s;
+    border-radius: 10px;
+    /* border: 2px solid var(--color-principal); */
 }
 
 .idea-card:hover img {
@@ -189,9 +197,20 @@ section {
 }
 
 .idea-content h3 {
+    font-size: 1.8rem !important; /* Forzamos a que sea más grande */
+    color: var(--color-acento);
+    margin-bottom: 15px;
     margin: 0 0 10px 0;
-    color: var(--color-lila);
+    line-height: 1.1;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgb(45, 0, 40),0 -5px 5px rgba(35, 0, 41, 0.5),0 5px 5px rgba(35, 0, 41, 0.5),-5px 0px 5px rgba(35, 0, 41, 0.3),-5px -5px 5px rgba(38, 0, 45, 0.3),5px 5px 5px rgba(38, 0, 45, 0.3); /* Efecto de brillo */
 }
+
+.horario{
+    text-shadow: 0px 2px 2px #35004e, 0px -2px 2px #35004e, 2px 0px 2px #35004e, -2px -0px 2px #35004e, 0px 0px 2px #35004e, 2px 0px 5px #000000, -2px -0px 5px #030a00, 0px 0px 5px #35004e;
+}
+
 
 /* =========================================
    FORMULARIO
