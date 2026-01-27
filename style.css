@@ -6,8 +6,8 @@
     --color-fondo: #050505;       /* Negro casi puro */
     --color-principal: #7B2CBF;   /* Morado Intenso */
     --color-secundario: #9D4EDD;  /* Morado Medio */
-    --color-acento: #00F3FF;      /* Azul Cian Neón (Para resaltar) */
-    --color-lila: #E0AAFF;        /* Lila suave (Para textos) */
+    --color-acento: #c34cd3;      
+    --color-lila: #e6aae1;        /* Lila suave (Para textos) */
     --color-tarjeta: #100b14;     /* Fondo muy oscuro para tarjetas */
 }
 
@@ -19,12 +19,23 @@ body {
     margin: 0;
     background-color: var(--color-fondo);
     background-image: url(/FondoDePantalla.png);
+    background-attachment: fixed;
+    background-position: center;
+    
     color: var(--color-lila); /* Texto en lila suave */
     text-align: center;
     border: 2px solid #CCFF00;
     
 }
 
+
+
+/* Para que el texto resalte sobre la imagen de fondo */
+.form-section, .idea-card, .donation-box {
+    background-color: rgba(16, 11, 20, 0.85); /* Fondo semi-transparente */
+    backdrop-filter: blur(8px); /* Efecto de cristal esmerilado */
+    border: 1px solid var(--color-principal);
+}
  .gracias{
     background-color: var(--color-fondo);
     background-image: url(/gracias.png);
@@ -96,23 +107,26 @@ section {
    GALERÍA DE IDEAS
    ========================================= */
 .ideas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-bottom: 50px;
-    margin: 40px auto;
-    border: 2px solid #576816;
-    background-color: #1a0b2e;
-    font-size: 0%;color: #120420;
+    background: rgba(123, 44, 191, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    max-width: 700px;
+    margin: 50px auto; 
+    border: 1px solid rgba(157, 78, 221, 0.2);
+    backdrop-filter: blur(5px); 
     
 }
 
 .idea-card {
-    background-color: var(--color-tarjeta);
-    border: 1px solid #2a1a40; /* Borde morado oscuro */
+    background: rgba(123, 44, 191, 0.1);
+    padding: 30px;
     border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    max-width: 700px;
+    margin: 50px auto; 
+    border: 1px solid rgba(157, 78, 221, 0.2);
+    backdrop-filter: blur(5px); 
 }
 
 .idea-card:hover {
@@ -146,13 +160,15 @@ section {
    FORMULARIO
    ========================================= */
 .form-section {
-    background: linear-gradient(135deg, #120420 0%, #0d0d1a 100%);
+    background: rgba(123, 44, 191, 0.1);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     max-width: 700px;
-    margin: 40px auto;
-    border: 1px solid #3c1e55;
+    margin: 50px auto; 
+    border: 1px solid rgba(157, 78, 221, 0.2);
+    backdrop-filter: blur(5px); 
+    
 }
 
 input, textarea {
@@ -200,9 +216,21 @@ button:hover, .boton:hover {
 }
 
 .boton-volver {
-    width: auto; /* Ajuste para botón de volver */
-    padding: 12px 30px;
-}
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            text-decoration: none;
+            background-color: var(--color-principal);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-family: 'Architects Daughter', cursive;
+            transition: background 0.3s;
+        }
+
+        .boton-volver:hover {
+            background-color: #1e3d21;
+        }
 
 /* =========================================
    DONACIONES Y FOOTER
@@ -299,3 +327,172 @@ footer {
         height: 50px;
     }
 }
+
+.carta  {
+            background: rgba(123, 44, 191, 0.1);
+            max-width: 700px;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin: 50px auto;
+            position: relative;
+            border: 1px solid rgba(157, 78, 221, 0.2);
+            backdrop-filter: blur(5px);
+            
+        }
+
+        /* Efecto de líneas de cuaderno */
+        .carta::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 40px;
+            height: 100%;
+            width: 2px;
+            background: rgba(255, 0, 0, 0.1);
+        }
+
+.introduccion {
+            background: rgba(123, 44, 191, 0.1);
+            max-width: 700px;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin: 50px auto;
+            position: relative;
+            border: 1px solid rgba(157, 78, 221, 0.2);
+            backdrop-filter: blur(5px);
+}
+
+.idea-nota {
+            background: rgba(123, 44, 191, 0.1);
+            max-width: 700px;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin: 50px auto;
+            position: relative;
+            border: 1px solid rgba(157, 78, 221, 0.2);
+            backdrop-filter: blur(5px);
+            
+        }
+ .contenedor-seguridad {
+            background: rgba(123, 44, 191, 0.1);
+            max-width: 800px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin: 50px auto;
+            border: 1px solid rgba(157, 78, 221, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        
+        .intro {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #b491ee;
+            margin-bottom: 40px;
+        }
+
+        .seccion-permisos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .tarjeta-permiso {
+            background: rgba(123, 44, 191, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid var(--verde-profundo);
+            transition: transform 0.3s ease;
+        }
+
+        .tarjeta-permiso:hover {
+            transform: scale(1.02);
+        }
+
+        .tarjeta-permiso h3 {
+            font-family: 'Architects Daughter', cursive;
+            margin-top: 0;
+            color: var(--verde-profundo);
+        }
+
+        .muro-frases {
+            margin-top: 40px;
+            background: #fac4ff;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px dashed #fbc02d;
+        }
+
+        
+        @media (max-width: 600px) {
+            .seccion-permisos { grid-template-columns: 1fr; }
+        }
+
+
+        .grid-cuidados {
+            background: rgba(123, 44, 191, 0.1);
+            max-width: 800px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin: 50px auto;
+            border: 1px solid rgba(157, 78, 221, 0.2);
+            backdrop-filter: blur(5px);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+         }
+
+.grid-cuidados:hover {
+            transform: scale(1.02);
+        }
+        .item-cuidado {
+        font-family: 'Architects Daughter', cursive;
+            margin-top: 0;
+            color: var(--verde-profundo);
+            text-shadow: #000;
+         }
+
+        .item-cuidado:hover {
+             transform: scale(1.02);
+        }
+
+ h3 {
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.849);
+            font-size: 1.3rem;
+            color: #ee94c1
+        
+        }
+
+        .item-cuidado p {
+            font-size: 1.2rem;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+
+        .mensaje-final {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            background: #4d50e4;
+            border-radius: 15px;
+            font-size: 1.3rem;
+            border: 1px dashed #fbc02d;
+        }
+
+     
+            
+            
+            
+            
+            
+
+        @media (max-width: 600px) {
+            .grid-cuidados { grid-template-columns: 1fr; }
+            .cuadro-spa { padding: 25px; }
+        } 
