@@ -555,32 +555,7 @@ footer {
    ========================================= */
        
               
-        .day-item { 
-            background: #653f77; 
-            border-left: 4px solid var(--morado-luz); 
-            margin: 15px 0; 
-            padding: 15px; 
-            border-radius: 8px; 
-            display: none; /* Oculto por defecto */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-        }
-        .day-item.visible { 
-            display: block; 
-            animation: fadeIn 0.8s ease-out; 
-        }
-        .day-item:hover { transform: scale(1.02); }
-        input[type="checkbox"] { 
-            margin-right: 15px; 
-            transform: scale(1.3);
-            accent-color: var(--morado-luz); 
-        }
-        @keyframes fadeIn { 
-            from { opacity: 0; transform: translateY(20px); } 
-            to { opacity: 1; transform: translateY(0); } 
-        }
-
-        /* Ajuste estético para el checklist */
+       /* Ajuste estético para el checklist */
 .routine-list li {
     display: flex;
     align-items: center; /* Centra el cuadrito con el texto */
