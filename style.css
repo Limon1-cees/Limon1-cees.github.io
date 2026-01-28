@@ -579,3 +579,19 @@ footer {
             from { opacity: 0; transform: translateY(20px); } 
             to { opacity: 1; transform: translateY(0); } 
         }
+
+        /* Ajuste estético para el checklist */
+.routine-list li {
+    display: flex;
+    align-items: center; /* Centra el cuadrito con el texto */
+    gap: 10px; /* Da espacio real entre el check y la letra */
+    margin-bottom: 12px;
+}
+
+.day-item {
+    transition: transform 0.3s ease;
+}
+
+.day-item:hover {
+    transform: translateY(-5px); /* Pequeña animación al pasar el mouse */
+}
