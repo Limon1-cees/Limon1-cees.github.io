@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Sendero de la Luz - Gotitas de Limonada</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>✨ El Sendero de la Luz</h1>
+    <p class="subtitle">"Un paso a la vez, guiado por tu propia esencia"</p>
+    
+    <div id="checklist">
+        </div>
+</div>
+
+<script>
+    // CONFIGURACIÓN: Cambia esta fecha al día que quieras que empiece el reto
+    const fechaInicio = new Date(2026, 0, 28); // 28 de Enero 2026
+
+    const tareas = [
+        "Definir tu propósito| Escribe en presente: 'Mi meta es...' Sé específico y positivo", 
+        "Identificar los 3 pilares que sostienen tu bienestar.",
+        "Realizar 15 minutos de silencio o meditación.",
+        "Limpiar un espacio físico que te genere paz.",
+        "Reconectar con una actividad que amabas de niño.",
+        "Escribir una nota de agradecimiento para ti mismo.",
+        "Reflexión semanal: ¿Qué luz descubriste en ti?",
+        "Identificar un hábito que quieras soltar.",
+        "Dedicar 20 minutos a un avance creativo o técnico.",
+        "Aprender algo nuevo, aunque sea pequeño.",
+        "Mantener la disciplina en un momento difícil.",
+        "Realizar una caminata consciente (observando el entorno).",
+        "Validar una emoción que hayas estado guardando.",
+        "Visualizar tu mejor versión al final del camino.",
+        "Pulir los detalles de lo que has construido hasta ahora.",
+        "Realizar un acto de bondad sin que nadie lo sepa.",
+        "Asegurar la constancia: hoy es el día del compromiso.",
+        "Revisar tus metas y ajustarlas con amor.",
+        "Planificar cómo seguirás brillando tras el reto.",
+        "Día de cierre: completar cualquier pendiente con calma.",
+        "¡Meta cumplida! Celebra tu transformación."
+    ];
+
+    function cargarProgreso() {
+        const hoy = new Date();
+        const diferenciaMilisegundos = hoy - fechaInicio;
+        const diaActual = Math.floor(diferenciaMilisegundos / (1000 * 60 * 60 * 24)) + 1;
+
+        const contenedor = document.getElementById('checklist');
+
+        tareas.forEach((tarea, index) => {
+            const numeroDia = index + 1;
+            // Solo muestra los días que ya han transcurrido
+            if (numeroDia <= diaActual && index < 21) {
+                const div = document.createElement('div');
+                div.className = 'day-item visible';
+                div.innerHTML = `
+                    <label style="cursor:pointer; display:flex; align-items:center;">
+                        <input type="checkbox"> 
+                        <span><strong>Día ${numeroDia}:</strong> ${tarea}</span>
+                    </label>
+                `;
+                contenedor.appendChild(div);
+            }
+        });
+        
+        if(diaActual <= 0) {
+            contenedor.innerHTML = "<p style='text-align:center;'>El sendero comenzará pronto. ¡Prepárate!</p>";
+        }
+    }
+
+    cargarProgreso();
+</script>
+
+</body>
+</html>

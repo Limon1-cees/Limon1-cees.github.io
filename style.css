@@ -5,9 +5,10 @@
 :root {
     --color-fondo: #050505;       /* Negro casi puro */
     --color-principal: #7B2CBF;   /* Morado Intenso */
-    --color-secundario: #9D4EDD;  /* Morado Medio */
-    --color-acento: #c34cd3;      
-    --color-lila: #e6aae1;        /* Lila suave (Para textos) */
+    --color-secundario: #c3a6da;  /* Morado Medio */
+    --color-acento: #b3992a;      
+    --color-lila: #d6b3d3; 
+    text-shadow: 0 0 10px rgba(46, 6, 56, 0.7),0 -5px 5px rgba(35, 0, 41, 0.4),-5px 0px 5px rgba(35, 0, 41, 0.4),-5px -5px 5px rgba(38, 0, 45, 0.4),5px 5px 5px rgba(38, 0, 45, 0.4); /* Efecto de brillo */
     --color-tarjeta: #100b14;     /* Fondo muy oscuro para tarjetas */
 }
 
@@ -42,6 +43,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     line-height: 1.8; /* Más espacio entre líneas para que no se vea amontonado */
+    letter-spacing: 3px
 }
 
 
@@ -541,14 +543,39 @@ footer {
             border: 1px dashed #fbc02d;
         }
 
-     
-            
-            
-            
-            
-            
 
         @media (max-width: 600px) {
             .grid-cuidados { grid-template-columns: 1fr; }
             .cuadro-spa { padding: 25px; }
         } 
+
+
+    /* =========================================
+   RETO 21 DIAS
+   ========================================= */
+       
+              
+        .day-item { 
+            background: #653f77; 
+            border-left: 4px solid var(--morado-luz); 
+            margin: 15px 0; 
+            padding: 15px; 
+            border-radius: 8px; 
+            display: none; /* Oculto por defecto */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .day-item.visible { 
+            display: block; 
+            animation: fadeIn 0.8s ease-out; 
+        }
+        .day-item:hover { transform: scale(1.02); }
+        input[type="checkbox"] { 
+            margin-right: 15px; 
+            transform: scale(1.3);
+            accent-color: var(--morado-luz); 
+        }
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(20px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
