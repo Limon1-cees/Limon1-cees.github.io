@@ -18,62 +18,92 @@
 </div>
 
 <script>
-    // CONFIGURACIÓN: Cambia esta fecha al día que quieras que empiece el reto
-    const fechaInicio = new Date(2026, 0, 28); // 28 de Enero 2026
+    // 1. CONFIGURACIÓN: Fecha de inicio
+    const fechaInicio = new Date(2026, 0, 28); 
 
+    // 2. LISTA DE TAREAS: "Título | Instrucción"
     const tareas = [
-        "Definir tu propósito| Escribe en presente: 'Mi meta es...' Sé específico y positivo", 
-        "Identificar los 3 pilares que sostienen tu bienestar.",
-        "Realizar 15 minutos de silencio o meditación.",
-        "Limpiar un espacio físico que te genere paz.",
-        "Reconectar con una actividad que amabas de niño.",
-        "Escribir una nota de agradecimiento para ti mismo.",
-        "Reflexión semanal: ¿Qué luz descubriste en ti?",
-        "Identificar un hábito que quieras soltar.",
-        "Dedicar 20 minutos a un avance creativo o técnico.",
-        "Aprender algo nuevo, aunque sea pequeño.",
-        "Mantener la disciplina en un momento difícil.",
-        "Realizar una caminata consciente (observando el entorno).",
-        "Validar una emoción que hayas estado guardando.",
-        "Visualizar tu mejor versión al final del camino.",
-        "Pulir los detalles de lo que has construido hasta ahora.",
-        "Realizar un acto de bondad sin que nadie lo sepa.",
-        "Asegurar la constancia: hoy es el día del compromiso.",
-        "Revisar tus metas y ajustarlas con amor.",
-        "Planificar cómo seguirás brillando tras el reto.",
-        "Día de cierre: completar cualquier pendiente con calma.",
-        "¡Meta cumplida! Celebra tu transformación."
+        "Definir tu propósito | Escribe en presente: 'Mi meta es...' Sé específico y positivo.",
+        "Identificar tus 3 pilares | Piensa en 1 persona, 1 actividad y 1 valor que nunca te fallan.",
+        "15 min de meditación | Siéntate derecho, cierra los ojos y solo observa tu respiración.",
+        "Limpiar un espacio físico | No limpies toda la casa, solo tu escritorio o mesa de noche.",
+        "Actividad de infancia | Escucha esa canción o haz ese dibujo que te hacía feliz de niño.",
+        "Nota de agradecimiento | Escribe: 'Gracias por no rendirte'. Reconoce tu propio valor.",
+        "Reflexión semanal | Anota un cambio positivo que hayas notado en tu humor esta semana.",
+        "Soltar un hábito | Si es el celular, déjalo en otra habitación por una hora.",
+        "20 min de avance | Trabaja en tu proyecto personal sin distracciones ni redes.",
+        "Aprender algo nuevo | Mira un tutorial corto sobre algo que siempre te dio curiosidad.",
+        "Mantener la disciplina | Si algo te estresa hoy, respira 3 veces antes de reaccionar.",
+        "Caminata consciente | Camina 10 min sintiendo el peso de tus pies en el suelo.",
+        "Validar una emoción | Dite: 'Está bien sentirse así, es parte de mi proceso'.",
+        "Visualización final | Imagina tu éxito: ¿Cómo se siente? ¿Qué ves a tu alrededor?",
+        "Pulir detalles | Revisa lo que has construido y mejora un pequeño aspecto visual.",
+        "Acto de bondad | Deja un comentario positivo o ayuda a alguien sin que te lo pida.",
+        "Día del compromiso | Hoy es el día de la voluntad. Hazlo aunque no tengas ganas.",
+        "Revisar metas | Si tu meta era muy difícil, ajústala para que sea realista y alcanzable.",
+        "Plan de brillo futuro | Escribe cómo mantendrás estos nuevos hábitos mañana.",
+        "Completar pendientes | Si te faltó marcar un día anterior, hoy es el momento.",
+        "¡Meta cumplida! | Celebra tu transformación con algo que te haga muy feliz."
     ];
 
     function cargarProgreso() {
         const hoy = new Date();
-        const diferenciaMilisegundos = hoy - fechaInicio;
-        const diaActual = Math.floor(diferenciaMilisegundos / (1000 * 60 * 60 * 24)) + 1;
-
+        const diaActual = Math.floor((hoy - fechaInicio) / (1000 * 60 * 60 * 24)) + 1;
         const contenedor = document.getElementById('checklist');
+        
+        if (!contenedor) return;
+        contenedor.innerHTML = "";
 
-        tareas.forEach((tarea, index) => {
+        tareas.forEach((item, index) => {
             const numeroDia = index + 1;
-            // Solo muestra los días que ya han transcurrido
+            
             if (numeroDia <= diaActual && index < 21) {
+                const [titulo, instruccion] = item.split(" | ");
                 const div = document.createElement('div');
-                div.className = 'day-item visible';
+                div.className = 'day-item';
+                
+                // Creamos los IDs únicos para la memoria de cada checkbox
+                const idBase = `dia${numeroDia}`;
+                
                 div.innerHTML = `
-                    <label style="cursor:pointer; display:flex; align-items:center;">
-                        <input type="checkbox"> 
-                        <span><strong>Día ${numeroDia}:</strong> ${tarea}</span>
-                    </label>
+                    <strong class="day-title">Día ${numeroDia}: La Victoria del Caballero</strong>
+                    <ul class="routine-list">
+                        <li><input type="checkbox" id="${idBase}-cama" onchange="guardarEstado(this.id)"> <span><strong>Victoria Inmediata:</strong> Tender la cama.</span></li>
+                        <li><input type="checkbox" id="${idBase}-aseo" onchange="guardarEstado(this.id)"> <span><strong>Templo Limpio:</strong> Aseo personal.</span></li>
+                        <li><input type="checkbox" id="${idBase}-agua" onchange="guardarEstado(this.id)"> <span><strong>Hidratación:</strong> Vaso de agua.</span></li>
+                        <li><input type="checkbox" id="${idBase}-mov" onchange="guardarEstado(this.id)"> <span><strong>Movimiento:</strong> 5-10 min de ejercicio.</span></li>
+                        <hr class="divider">
+                        <li class="acto-del-dia">
+                            <input type="checkbox" id="${idBase}-acto" onchange="guardarEstado(this.id)"> 
+                            <span><strong>El Acto:</strong> ${titulo}</span>
+                            <br><small style="color: #777; margin-left: 28px; font-style: italic;">${instruccion}</small>
+                        </li>
+                    </ul>
                 `;
                 contenedor.appendChild(div);
+                
+                // Cargar el estado guardado de cada checkbox
+                const checks = div.querySelectorAll('input[type="checkbox"]');
+                checks.forEach(check => {
+                    const estado = localStorage.getItem(check.id);
+                    if (estado === "true") check.checked = true;
+                });
             }
         });
-        
+
         if(diaActual <= 0) {
-            contenedor.innerHTML = "<p style='text-align:center;'>El sendero comenzará pronto. ¡Prepárate!</p>";
+            contenedor.innerHTML = "<p style='text-align:center; padding: 20px;'>El sendero comenzará pronto. ¡Prepárate, Caballero!</p>";
         }
     }
 
-    cargarProgreso();
+    // Función para guardar en la memoria del navegador
+    function guardarEstado(id) {
+        const checkbox = document.getElementById(id);
+        localStorage.setItem(id, checkbox.checked);
+    }
+
+    // Ejecutar al cargar
+    window.onload = cargarProgreso;
 </script>
 
 </body>
