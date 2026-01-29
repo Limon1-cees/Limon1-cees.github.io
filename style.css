@@ -87,6 +87,12 @@ header h1 {
     background-size: contain;
 }
 
+.sendero{
+    background-color: var(--color-fondo);
+    background-image: url(/sendero.png);
+    background-size: contain;
+}
+
 /* Nota: Cambié 'head' por 'header' que es la etiqueta correcta */
 header {
     background-color: #0a0a0a;
@@ -555,18 +561,19 @@ footer {
    ========================================= */
        
               
-       /* Ajuste estético para el checklist */
-.routine-list li {
-    display: flex;
-    align-items: center; /* Centra el cuadrito con el texto */
-    gap: 10px; /* Da espacio real entre el check y la letra */
-    margin-bottom: 12px;
+/* Checkboxes Estilo Neón */
+.routine-list input[type="checkbox"] {
+    accent-color: var(--color-principal);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px var(--color-principal));
 }
 
-.day-item {
-    transition: transform 0.3s ease;
-}
-
-.day-item:hover {
-    transform: translateY(-5px); /* Pequeña animación al pasar el mouse */
+/* El Acto del Día resaltado */
+.acto-del-dia {
+    background: rgba(184, 51, 182, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px dashed var(--color-secundario);
 }
