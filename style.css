@@ -7,8 +7,8 @@
     --color-principal: #7B2CBF;   /* Morado Intenso */
     --color-secundario: #c3a6da;  /* Morado Medio */
     --color-acento: #b3992a;      
-    --color-lila: #d6b3d3; 
-    text-shadow: 0 0 10px rgba(46, 6, 56, 0.7),0 -5px 5px rgba(35, 0, 41, 0.4),-5px 0px 5px rgba(35, 0, 41, 0.4),-5px -5px 5px rgba(38, 0, 45, 0.4),5px 5px 5px rgba(38, 0, 45, 0.4); /* Efecto de brillo */
+    --color-lila: #e095da; 
+    text-shadow: 0 0 10px rgb(45, 14, 51),0 -5px 5px rgb(35, 0, 41),-5px 0px 5px rgba(35, 0, 41, 0.993),-5px -5px 5px rgb(38, 0, 45),5px 5px 5px rgba(38, 0, 45, 0.993); /* Efecto de brillo */
     --color-tarjeta: #100b14;     /* Fondo muy oscuro para tarjetas */
 }
 
@@ -484,7 +484,7 @@ footer {
 
         .muro-frases {
             margin-top: 40px;
-            background: #fac4ff;
+            background: #c28cc7;
             padding: 25px;
             border-radius: 15px;
             text-align: center;
@@ -529,7 +529,7 @@ footer {
             text-align: center;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.849);
             font-size: 1.3rem;
-            color: #ee94c1
+            color: #cf4188
         
         }
 
