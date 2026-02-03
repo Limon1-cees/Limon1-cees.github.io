@@ -10,11 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <meta property="og:image" content="https://limon1-cees.github.io/img/foto.jpg">
     <title>Gotitas de Limonada</title> 
-    <link rel="stylesheet" href="style.css?cache=4">
+
+    <link rel="stylesheet" href="style.css?cache=666">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Architects+Daughter&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Architects+Daughter&family=Indie+Flower&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
     
 </head>
@@ -42,9 +43,9 @@
         <h1>🎙️ ¡Gotitas al Aire!</h1>
         <p>Acompañanos en nuestro nuevo <strong>Live Podcast</strong>. Un espacio para charlar, compartir y refrescar el alma.</p>
         <div class="horario">
-            <span style="font-size: 1.3rem;">🗓️ <strong>Todos los Martes</strong></span>
-            <span style="margin: 0 15px; opacity: 0.5;">|</span>
-            <span style="font-size: 1.3rem;">🕘 <strong>9:00 PM</strong> (Hora CDMX)</span>
+            <span>🗓️ <strong>Todos los Martes</strong></span>
+            <span style="margin: 0 15px;">|</span>
+            <span>🕘 <strong>9:00 PM</strong> (Hora CDMX)</span>
         </div>
         <p style="margin-top: 20px; font-style: italic; opacity: 0.9;">¡Te esperamos en TikTok para compartir una limonada juntos!</p>
     </section>
@@ -57,47 +58,45 @@
     <h2> Quiero que sepas que tu presencia es invaluable. He preparado estas palabras para que nunca lo olvides.</h2>
 
 
-        <div class="idea-card">
+        <div class="idea-card" id="notas">
             <img src="./img/cartas bosque.png" alt="Carta"> 
             <div class="idea-content">
                 <h3>Si en algún momento necesitas escucharlo y no hay nadie cerca para decírtelo, entra aquí. Este es nuestro lugar seguro y estará disponible para ti siempre que lo necesites.</h3>
                 <p>
                     
                 Una carta escrita a mano es un tesoro emocional inolvidable
-                 <a href="notasAdmiracion.html" class="boton" target="_blank">Entra aquí.</a>
+                 <a href="notasAdmiracion.html" class="boton" target="_self">Entra aquí.</a>
     
 
                 </p>
             </div>
         </div>
 
-        <div class="idea-card">
+        <div class="idea-card" id="cuidado">
             <img src="./img/Gemini_Generated_Image_8nu8h68nu8h68nu8.png" alt="Spa">
             <div class="idea-content">
                 <h3>Cuidado Personal</h3>
                 <p>
                     Un kit de relajación porque su paz mental también es prioridad
-                  <a href="cuidadoPersonal.html" class="boton" target="_blank"> Ver más.</a>   
-                   
-                
+                  <a href="cuidadoPersonal.html" class="boton" target="_self"> Ver más.</a>   
                 </p>
             </div>
         </div>
 
 
-        <div class="idea-card">
+        <div class="idea-card" id="seguridad">
             
             <div class="idea-content">
                 <img src="./img/cascada.png" alt="espacio seguro">
                 <h3>Tu Espacio Seguro</h3>
                 <p>
                     Un rincón dedicado a validar tus emociones y recordarte tu valor.
-                    <a href="seguridad.html" class="boton" target="_blank">Entrar aquí.</a>
+                    <a href="seguridad.html" class="boton" target="_self">Entrar aquí.</a>
                 </p>
             </div>
         </div>
 
-      <div class="idea-card">
+      <div class="idea-card" id="sendero">
             
             <div class="idea-content">
                 <img src="./img/senderoo.png" alt="espacio seguro">
@@ -108,7 +107,7 @@
                     
                                     
                 A veces, el camino hacia nuestra mejor versión no se recorre solo. El Sendero de la Luz es un viaje de 21 días diseñado para reconectar con tu esencia, paso a paso y con calma. No verás todo el camino de golpe, solo la luz necesaria para el día de hoy.
-                 <a href="sendero.html" class="boton" target="_blank">¿Te permites avanzar?</a>
+                 <a href="sendero.html" class="boton" target="_self">¿Te permites avanzar?</a>
     
 
                 </p>
@@ -119,38 +118,47 @@
 
 
 
-<div class="form-section">
-    <h2>¿Quieres dejar un mensaje?</h2>
+    <div class="form-section">
+        <h2>Este es un espacio seguro.</h2>
 
-    <form 
-        action="https://formsubmit.co/limonada.reptar@hotmail.com" 
-        method="POST"
-    >
-        <!-- Configuración FormSubmit -->
-        <input type="hidden" name="_next" value="https://limon1-cees.github.io/gracias.html">
-        <input type="hidden" name="_subject" value="Nuevo mensaje desde la jarra">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="_honey" style="display:none">
+        <p style="font-size: 20px;margin-bottom:0px;margin-top:0px">
+            Aquí puedes escribir lo que traes cargando sin ser juzgado.
+            <strong>Puedes hacerlo de forma anónima.</strong><br>
+            No pedimos datos reales ni redes sociales.
+        </p>
 
-        <!-- Campos visibles -->
-        <input 
-            type="text" 
-            name="Nombre" 
-            placeholder="Tu nombre" 
+        <form action="https://formsubmit.co/limonada.reptar@hotmail.com" method="POST">
+            <!-- Configuración FormSubmit -->
+            <input type="hidden" name="_next" value="https://limon1-cees.github.io/gracias.html">
+            <input type="hidden" name="_subject" value="Mensaje anónimo desde el buzón">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none">
+
+            <!-- Nombre / Anónimo -->
+            <input
+            type="text"
+            name="Nombre"
+            placeholder="Tu nombre (opcional) o escribe: Anónimo"
+            >
+
+            <p style="font-size: 20px;margin-bottom:0px;margin-top:0px">
+            Si prefieres, deja “Anónimo”. Nadie verá tu identidad.
+            </p>
+
+            <!-- Mensaje -->
+            <textarea
+            name="Mensaje"
+            placeholder="Escribe aquí tu mensaje..."
             required
-        >
+            ></textarea>
 
-        <textarea 
-            name="Mensaje" 
-            placeholder="Escribe aquí..." 
-            required
-        ></textarea>
-        
-        <button type="submit">Enviar a la jarra </button>  
-    </form>
+            <button type="submit" class="boton">
+            <div class="boom">Enviar a la jarra</div>
+            </button>
+        </form>
+    </div>
 
-    
-</div>
+
 </div>
 <div class="donation-box">
     <h3>¿Te gustaría ser una gotita de Limonada?</h3>
@@ -164,14 +172,8 @@
     <p>Gotas De Limonada &copy; 2026</p>
 </footer>
 
-<script>
-   
 
-   
-</script>
-
-
-<a href="https://www.tiktok.com/@limonada.de.cecii" class="boton-limon-tiktok" target="_blank" title="Síguenos en TikTok">
+<a href="https://www.tiktok.com/@limonada.de.cecii" class="boton-limon-tiktok rotacion" target="_blank" title="Síguenos en TikTok">
     <div class="limon-forma">
         <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/></svg>
     </div>

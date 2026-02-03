@@ -2,221 +2,255 @@
    VARIABLES: PALETA GALÁCTICA
    (Negro, Morado, Lila, Azul)
    ========================================= */
+/* MARK: ROOT */
 :root {
-    --color-fondo: #050505;       /* Negro casi puro */
-    --color-principal: #7B2CBF;   /* Morado Intenso */
-    --color-secundario: #c3a6da;  /* Morado Medio */
-    --color-acento: #b3992a;      
-    --color-lila: #e095da; 
-    text-shadow: 0 0 10px rgb(45, 14, 51),0 -5px 5px rgb(35, 0, 41),-5px 0px 5px rgba(35, 0, 41, 0.993),-5px -5px 5px rgb(38, 0, 45),5px 5px 5px rgba(38, 0, 45, 0.993); /* Efecto de brillo */
-    --color-tarjeta: #100b14;     /* Fondo muy oscuro para tarjetas */
+	--color-fondo: #050505;
+	/* Negro casi puro */
+	--color-principal: #7B2CBF;
+	/* Morado Intenso */
+	--color-secundario: #efdaff;
+	/* Morado Medio */
+	--color-acento: #b3992a;
+	--titulos-color: #ceaf26;
+	--titulos-sombra: 0px 2px 2px #2c003e, 0px -2px 2px #2c003e, 2px 0px 2px #2c003e, -2px -0px 2px #2c003e, 0px 0px 2px #2c003e, 2px 0px 10px #2c003e, -2px -0px 10px #2c003e, 0px 0px 10px #2c003e;
+	--color-lila: #f4e2ff;
+    --borde-color: #CCFF00;
+    --borde-corte: 2px dashed #b3992a;
+    --verde-profundo:#5fd826; 
+	--p-texto-color: #fcf0ff;
+	--p-texto-sombra: 0px 2px 2px #000000, 0px -2px 2px #000000, 2px 0px 2px #000000, -2px -0px 2px #000000, 0px 0px 2px #000000, 2px 0px 5px #000000, -2px -0px 5px #030a00, 0px 0px 5px #000100;
+	text-shadow: 0 0 10px rgb(45, 14, 51), 0 -5px 5px rgb(35, 0, 41), -5px 0px 5px rgba(35, 0, 41, 0.993), -5px -5px 5px rgb(38, 0, 45), 5px 5px 5px rgba(38, 0, 45, 0.993);
+	/* Efecto de brillo */
+	--color-tarjeta: #100b14;
+	/* Fondo muy oscuro para tarjetas */
 }
 
 /* =========================================
    ESTILOS GENERALES
    ========================================= */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    background-color: var(--color-fondo);
-    background-image: url(./img/fondo2.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    color: var(--color-lila); /* Texto en lila suave */
-    text-align: center;
-    border: 2px solid #CCFF00;
-    
+	font-family: 'Segoe UI', sans-serif;
+	margin: 0;
+	background-color: var(--color-fondo);
+	background-image: url(./img/fondo2.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	color: var(--color-lila);
+	/* Texto en lila suave */
+	text-align: center;
+	border: 2px solid var(--borde-color);
+
 }
 
-.foto-principal{
-    width: 280px;
-    border-radius: 10px;
+.foto-principal {
+	width: 280px;
+	border-radius: 10px;
 }
 
 /* --- AJUSTE DE TEXTOS GENERALES --- */
 
-/* Agrandar el Manifiesto de Bienvenida */
-.container p {
-    font-size: 1.4rem; /* Antes era 1.2, ahora es más legible */
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.8; /* Más espacio entre líneas para que no se vea amontonado */
-    letter-spacing: 3px
-}
-
-
 
 /* Texto dentro de las tarjetas */
 .idea-content p {
-    font-size: 1.2rem;
-    color: var(--color-lila);
+	font-size: 1.2rem;
+	color: var(--color-lila);
 }
 
 
 /* --- CORRECCIÓN DE POSICIÓN --- */
 header h1 {
-    font-size: 3.5rem; /* El título principal debe ser imponente */
-    margin-top: 20px;
+	font-size: 3.5rem;
+	/* El título principal debe ser imponente */
+	margin-top: 20px;
 }
-
 
 
 /* Para que el texto resalte sobre la imagen de fondo */
-.form-section, .idea-card, .donation-box {
-    background-color: rgba(16, 11, 20, 0.85); /* Fondo semi-transparente */
-    backdrop-filter: blur(8px); /* Efecto de cristal esmerilado */
-    border: 1px solid var(--color-principal);
+.form-section,
+.idea-card,
+.donation-box {
+	background-color: rgba(16, 11, 20, 0.85);
+	/* Fondo semi-transparente */
+	backdrop-filter: blur(8px);
+	/* Efecto de cristal esmerilado */
+	border: 1px solid var(--color-principal);
 }
- .gracias{
-    background-color: var(--color-fondo);
-    background-image: url(./img/gracias.png);
-    background-size: contain;
-}
-
-.notasAdmiracion{
-    background-color: var(--color-fondo);
-    background-image: url(./img/cartas.png);
-    background-size: contain;
+.form-section input::placeholder,textarea::placeholder{
+    color:var(--p-texto-color);
 }
 
-.cuidadoPersonal{
-    background-color: var(--color-fondo);
-    background-image: url(./img/cuidadoPersonal.png);
-    background-size: contain;
+.gracias {
+	background-color: var(--color-fondo);
+	background-image: url(./img/gracias.png);
+	background-size: contain;
 }
 
-.sendero{
-    background-color: var(--color-fondo);
-    background-image: url(./img/senderoo.png);
-    background-size: contain;
+.notasAdmiracion {
+	background-color: var(--color-fondo);
+	background-image: url(./img/cartas.png);
+	background-size: contain;
+}
+
+.cuidadoPersonal {
+	background-color: var(--color-fondo);
+	background-image: url(./img/cuidadoPersonal.png);
+	background-size: contain;
+}
+
+.sendero {
+	background-color: var(--color-fondo);
+	background-image: url(./img/senderoo.png);
+	background-size: contain;
 }
 
 /* Nota: Cambié 'head' por 'header' que es la etiqueta correcta */
 header {
-    background-color: #0a0a0a;
-    padding: 50px 20px;
-    text-align: center;
-    border-bottom: 3px solid var(--color-acento); /* Línea azul neón */
-    background-image: linear-gradient(to bottom, #1a0b2e, #050505);
+	background-color: #0a0a0a;
+	padding: 50px 20px;
+	text-align: center;
+	border-bottom: 3px solid var(--color-acento);
+	/* Línea azul neón */
+	background-image: linear-gradient(to bottom, #1a0b2e, #050505);
 }
 
+/* MARK: h1 */
 h1 {
-    font-family: "Architects Daughter", cursive;
-    font-weight: 400;
-    font-size: 3rem;
-    color: var(--color-acento); /* Título en Azul Neón */
-    margin: 0;
-    background-color: transparent;
-    border-radius: 0;
-    text-shadow: 0 0 10px rgba(46, 6, 56, 0.7),0 -5px 5px rgba(35, 0, 41, 0.4),-5px 0px 5px rgba(35, 0, 41, 0.4),-5px -5px 5px rgba(38, 0, 45, 0.4),5px 5px 5px rgba(38, 0, 45, 0.4); /* Efecto de brillo */
+	/* font-family: "Architects Daughter", cursive; */
+	font-family: "Oswald", sans-serif;
+	line-height: 1.1;
+	font-weight: 600;
+	font-size: 3rem;
+	color: var(--titulos-color);
+	/* Título en Azul Neón */
+	margin: 0;
+	background-color: transparent;
+	border-radius: 0;
+	text-shadow: var(--titulos-sombra);
 }
 
+
+/* MARK: p */
 p {
-    font-family: "Indie Flower", cursive;
-    font-weight: 400;
-    font-size: 1.2rem;
-    text-align: center;
-    color: #dcd6f7; /* Blanco lila */
-    background-color: transparent;
-    line-height: 1.6;
-    text-shadow: 0px 2px 2px #000000, 0px -2px 2px #000000, 2px 0px 2px #000000, -2px -0px 2px #000000, 0px 0px 2px #000000, 2px 0px 5px #000000, -2px -0px 5px #030a00, 0px 0px 5px #000100;
+	font-size: 24px;
+	/* Antes era 1.2, ahora es más legible */
+	max-width: 850px;
+	margin-left: auto;
+	margin-right: auto;
+	letter-spacing: 3px;
+	font-family: "Indie Flower", cursive;
+	font-weight: 600;
+	text-align: center;
+	color: var(--p-texto-color);
+	;
+	/* Blanco lila */
+	background-color: transparent;
+	line-height: 1.5 !important;
+	text-shadow: var(--p-texto-sombra);
 }
 
 
 /* Títulos de las secciones (H2) */
+/* MARK: h2 */
 h2 {
-    text-align: center;
-    color: var(--color-secundario);
-    font-size: 2.2rem;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    background: rgba(89, 2, 102, 0.219); 
-    border: 2px solid #576816;
-    border-radius: 10px; 
-    padding: 10px;
-    box-shadow: 0 8px 32px 0 rgba(184, 51, 182, 0.37); 
-    text-shadow: 0 0 10px rgba(52, 0, 65, 0.3),0 -5px 5px rgba(35, 0, 41, 0.3),-5px 0px 5px rgba(35, 0, 41, 0.3),-5px -5px 5px rgba(38, 0, 45, 0.3),5px 5px 5px rgba(38, 0, 45, 0.3); /* Efecto de brillo */
-    backdrop-filter: blur(5px); 
-    -webkit-backdrop-filter: blur(5px);
-    font-weight: 700;
+	text-align: center;
+	color: var(--color-secundario);
+	font-size: 2.2rem;
+	margin-top: 40px;
+	margin-bottom: 30px;
+	background: rgba(89, 2, 102, 0.219);
+	border: var(--borde-corte);
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 0 8px 32px 0 rgba(184, 51, 182, 0.37);
+	text-shadow: var(--titulos-sombra);
+	/* Efecto de brillo */
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	font-weight: 700;
 }
 
 section {
-    font-family: "Abril Fatface", serif;
+	font-family: "Abril Fatface", serif;
 }
 
 .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
+	max-width: 1100px;
+	margin: auto;
+	padding: 20px;
 }
 
 /* =========================================
    GALERÍA DE IDEAS
    ========================================= */
 .ideas-grid {
-    background: rgba(123, 44, 191, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    max-width: 700px;
-    margin: 50px auto; 
-    border: 1px solid rgba(157, 78, 221, 0.2);
-    backdrop-filter: blur(5px); 
-    
+	background: rgba(123, 44, 191, 0.1);
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	max-width: 700px;
+	margin: 50px auto;
+	border: 1px solid rgba(157, 78, 221, 0.2);
+	backdrop-filter: blur(5px);
+
 }
 
 .idea-card {
-    background: rgba(123, 44, 191, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    width: 75%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    max-width: 700px;    
-    margin: 50px auto; 
-    border: 1px solid rgba(157, 78, 221, 0.2);
-    backdrop-filter: blur(5px); 
+	background: rgba(123, 44, 191, 0.1);
+	padding: 30px;
+	border-radius: 15px;
+	width: 75%;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	max-width: 700px;
+	margin: 50px auto;
+	border: 1px solid rgba(157, 78, 221, 0.2);
+	backdrop-filter: blur(5px);
 }
 
 .idea-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 20px rgba(123, 44, 191, 0.4); /* Resplandor morado */
-    border-color: var(--color-acento);
+	transform: translateY(-10px);
+	box-shadow: 0 0 20px rgba(123, 44, 191, 0.4);
+	/* Resplandor morado */
+	border-color: var(--color-acento);
 }
 
 .idea-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 1; /* Un poco oscuras para que no lastimen la vista */
-    transition: opacity 0.3s;
-    border-radius: 10px;
-    /* border: 2px solid var(--color-principal); */
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 1;
+	/* Un poco oscuras para que no lastimen la vista */
+	transition: opacity 0.3s;
+	border-radius: 10px;
+	/* border: 2px solid var(--color-principal); */
 }
 
 .idea-card:hover img {
-    opacity: 1;
+	opacity: 1;
 }
 
 .idea-content {
-    padding: 20px;
+	padding: 20px;
 }
 
 .idea-content h3 {
-    font-size: 1.8rem !important; /* Forzamos a que sea más grande */
-    color: var(--color-acento);
-    margin-bottom: 15px;
-    margin: 0 0 10px 0;
-    line-height: 1.1;
-    letter-spacing: 1px;
-    font-weight: 700;
-    text-shadow: 0 0 10px rgb(45, 0, 40),0 -5px 5px rgba(35, 0, 41, 0.5),0 5px 5px rgba(35, 0, 41, 0.5),-5px 0px 5px rgba(35, 0, 41, 0.3),-5px -5px 5px rgba(38, 0, 45, 0.3),5px 5px 5px rgba(38, 0, 45, 0.3); /* Efecto de brillo */
+	font-size: 1.8rem !important;
+	/* Forzamos a que sea más grande */
+	color: var(--color-acento);
+	margin-bottom: 15px;
+	margin: 0 0 10px 0;
+	line-height: 1.1;
+	letter-spacing: 1px;
+	font-weight: 700;
+	text-shadow: var(--titulos-sombra);
+	/* Efecto de brillo */
 }
 
-.horario{
-    text-shadow: 0px 2px 2px #35004e, 0px -2px 2px #35004e, 2px 0px 2px #35004e, -2px -0px 2px #35004e, 0px 0px 2px #35004e, 2px 0px 5px #000000, -2px -0px 5px #030a00, 0px 0px 5px #35004e;
+/* MARK: HORARIO */
+.horario {
+	text-shadow: var(--titulos-sombra);
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
 }
 
 
@@ -224,356 +258,419 @@ section {
    FORMULARIO
    ========================================= */
 .form-section {
-    background: rgba(123, 44, 191, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    max-width: 700px;
-    margin: 50px auto; 
-    border: 1px solid rgba(157, 78, 221, 0.2);
-    backdrop-filter: blur(5px); 
-    
+	background: rgba(123, 44, 191, 0.1);
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	max-width: 700px;
+	margin: 50px auto;
+	border: 1px solid rgba(157, 78, 221, 0.2);
+	backdrop-filter: blur(5px);
+
 }
 
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    background-color: #000;
-    border: 1px solid var(--color-principal);
-    color: white;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-family: 'Indie Flower', cursive;
-    font-size: 1.1rem;
+input,
+textarea {
+	width: 100%;
+	padding: 12px;
+	margin: 10px 0;
+	background-color: #000;
+	border: 1px solid var(--color-principal);
+	color: white;
+	border-radius: 8px;
+	box-sizing: border-box;
+	font-family: 'Indie Flower', cursive;
+	font-size: 1.1rem;
 }
 
-input:focus, textarea:focus {
-    outline: none;
-    border-color: var(--color-acento); /* Borde azul al escribir */
-    box-shadow: 0 0 8px rgba(0, 243, 255, 0.3);
+input:focus,
+textarea:focus {
+	outline: none;
+	border-color: var(--color-acento);
+	/* Borde azul al escribir */
+	box-shadow: 0 0 8px rgba(0, 243, 255, 0.3);
 }
 
-/* =========================================
-   BOTONES
-   ========================================= */
-button, .boton {
-    display: inline-block;
-    background-color: var(--color-principal); /* Fondo Morado */
-    color: white;
-    text-align: center;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-    transition: 0.3s;
-    text-decoration: none;
-    box-sizing: border-box;
+
+   /* MARK: BOTONES */
+
+.boton {
+	display: inline-block;
+	background-color: var(--color-principal);
+	/* Fondo Morado */
+	color: white;
+	text-align: center;
+	border: none;
+	padding: 15px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: bold;
+	width: 100%;
+	transition: 0.3s;
+	text-decoration: none;
+	box-sizing: border-box;
+    font-size: 20px;
+    font-family: "Indie Flower", cursive;
+    text-shadow: var(--p-texto-sombra);
 }
 
-button:hover, .boton:hover {
-    background-color: var(--color-acento); /* Fondo Azul al pasar mouse */
-    color: #000; /* Texto negro para contraste */
-    box-shadow: 0 0 15px var(--color-acento); /* Brillo neón */
+.boton:hover {
+	background-color: var(--color-acento);
+
+	/* Texto negro para contraste */
+	box-shadow: 0 0 15px var(--color-acento);
+	/* Brillo neón */
 }
 
 .boton-volver {
-            display: block;
-            width: fit-content;
-            margin: 30px auto 0;
-            text-decoration: none;
-            background-color: var(--color-principal);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-family: 'Architects Daughter', cursive;
-            transition: background 0.3s;
-        }
+	display: block;
+	width: fit-content;
+	margin: 30px auto 0;
+	text-decoration: none;
+	background-color: var(--color-principal);
+	color: white;
+	padding: 12px 30px;
+	border-radius: 25px;
+	font-family: 'Architects Daughter', cursive;
+	transition: background 0.3s;
+}
 
-        .boton-volver:hover {
-            background-color: #1e3d21;
-        }
+.boton-volver:hover {
+	background-color: #1e3d21;
+}
 
 /* =========================================
    DONACIONES Y FOOTER
    ========================================= */
 .donation-box {
-    background: #0d0d0e;
-    border: 2px dashed var(--color-acento);
-    padding: 30px;
-    text-align: center;
-    border-radius: 15px;
-    margin-top: 40px;
-    color: var(--color-lila);
+	background: #0d0d0e;
+	border: var(--borde-corte);
+	padding: 30px;
+	text-align: center;
+	border-radius: 15px;
+	margin-top: 40px;
+	color: var(--color-lila);
+    margin: auto;
 }
 
 .btn-donar {
-    background-color: var(--color-acento); /* Azul */
-    color: #000;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 50px;
-    display: inline-block;
-    transition: 0.3s;
-    margin-top: 15px;
+	background-color: var(--color-acento);
+	/* Azul */
+	color: #000;
+	padding: 15px 30px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 50px;
+	display: inline-block;
+	transition: 0.3s;
+	margin-top: 15px;
+	text-shadow: none;
 }
 
 .btn-donar:hover {
-    transform: scale(1.05);
-    background-color: white;
-    box-shadow: 0 0 15px white;
+	transform: scale(1.05);
+	background-color: white;
+	box-shadow: 0 0 15px white;
 }
 
 footer {
-    text-align: center;
-    padding: 30px;
-    background: #080808;
-    color: var(--color-principal);
-    border-top: 1px solid #1f1f1f;
+	text-align: center;
+	padding: 30px;
+	background: #080808;
+	color: var(--color-principal);
+	border-top: 1px solid #1f1f1f;
 }
 
 /* =========================================
    BOTÓN LIMÓN (Adaptado a la paleta)
    ========================================= */
 .boton-limon-tiktok {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    text-decoration: none;
-    transition: transform 0.3s ease;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 9999;
+	text-decoration: none;
+	transition: transform 0.3s ease;
 }
 
 .boton-limon-tiktok:hover {
-    transform: scale(1.1) rotate(10deg);
+	transform: scale(1.1) rotate(10deg);
 }
 
 .limon-forma {
-    width: 60px;
-    height: 60px;
-    /* He cambiado el limón amarillo por uno "Azul Eléctrico" para que combine */
-    background-color: var(--color-acento); 
-    border: 2px solid #fff;
-    border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 15px rgba(187, 255, 0, 0.4);
-    position: relative;
+	width: 60px;
+	height: 60px;
+	/* He cambiado el limón amarillo por uno "Azul Eléctrico" para que combine */
+	background-color: var(--color-acento);
+	border: 2px solid #fff;
+	border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 15px rgba(187, 255, 0, 0.4);
+	position: relative;
 }
 
 .limon-forma::after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: 10px;
-    width: 10px;
-    height: 10px;
-    background-color: var(--color-principal); /* Rabito Morado */
-    border-radius: 50% 0 50% 0;
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: 10px;
+	width: 10px;
+	height: 10px;
+	background-color: var(--color-principal);
+	/* Rabito Morado */
+	border-radius: 50% 0 50% 0;
 }
 
 .limon-forma svg {
-    width: 25px;
-    fill: #000000; /* Logo TikTok en negro */
+	width: 25px;
+	fill: #000000;
+	/* Logo TikTok en negro */
 }
 
 @media (max-width: 600px) {
-    .boton-limon-tiktok {
-        bottom: 15px;
-        right: 15px;
-    }
-    .limon-forma {
-        width: 50px;
-        height: 50px;
-    }
+	.boton-limon-tiktok {
+		bottom: 15px;
+		right: 15px;
+	}
+
+	.limon-forma {
+		width: 50px;
+		height: 50px;
+	}
 }
 
-.carta  {
-            background: rgba(123, 44, 191, 0.1);
-            max-width: 700px;
-            padding: 50px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            margin: 50px auto;
-            position: relative;
-            border: 1px solid rgba(157, 78, 221, 0.2);
-            backdrop-filter: blur(5px);
-            
-        }
+.carta {
+	background: rgba(123, 44, 191, 0.1);
+	max-width: 700px;
+	padding: 50px;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	margin: 50px auto;
+	position: relative;
+	border: 1px solid rgba(157, 78, 221, 0.2);
+	backdrop-filter: blur(5px);
 
-        /* Efecto de líneas de cuaderno */
-        .carta::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 40px;
-            height: 100%;
-            width: 2px;
-            background: rgba(255, 0, 0, 0.1);
-        }
+}
+
+/* Efecto de líneas de cuaderno */
+.carta::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 40px;
+	height: 100%;
+	width: 2px;
+}
 
 .introduccion {
-            background: rgba(123, 44, 191, 0.1);
-            max-width: 700px;
-            padding: 50px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            margin: 50px auto;
-            position: relative;
-            border: 1px solid rgba(157, 78, 221, 0.2);
-            backdrop-filter: blur(5px);
+	background: rgba(123, 44, 191, 0.1);
+	max-width: 700px;
+	padding: 50px;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	margin: 50px auto;
+	position: relative;
+	border: 1px solid rgba(157, 78, 221, 0.2);
+	backdrop-filter: blur(5px);    
 }
 
 .idea-nota {
-            background: rgba(123, 44, 191, 0.1);
-            max-width: 700px;
-            padding: 50px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            margin: 50px auto;
-            position: relative;
-            border: 1px solid rgba(157, 78, 221, 0.2);
-            backdrop-filter: blur(5px);
-            
-        }
- .contenedor-seguridad {
-            background: rgba(123, 44, 191, 0.1);
-            max-width: 800px;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            margin: 50px auto;
-            border: 1px solid rgba(157, 78, 221, 0.2);
-            backdrop-filter: blur(5px);
-        }
+	background: rgba(123, 44, 191, 0.1);
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	margin: 40px auto;
+	position: relative;
+    font-size: 24px;
+	border: 1px solid rgba(157, 78, 221, 0.2);
+	backdrop-filter: blur(5px);
+    color: var(--p-texto-color);
+    text-shadow: var(--p-texto-sombra) !important;
 
-        
-        .intro {
-            text-align: center;
-            font-size: 1.3rem;
-            color: #b491ee;
-            margin-bottom: 40px;
-        }
+}
 
-        .seccion-permisos {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .tarjeta-permiso {
-            background: rgba(123, 44, 191, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            border-left: 5px solid var(--verde-profundo);
-            transition: transform 0.3s ease;
-        }
-
-        .tarjeta-permiso:hover {
-            transform: scale(1.02);
-        }
-
-        .tarjeta-permiso h3 {
-            font-family: 'Architects Daughter', cursive;
-            margin-top: 0;
-            color: var(--verde-profundo);
-        }
-
-        .muro-frases {
-            margin-top: 40px;
-            background: #c28cc7;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px dashed #fbc02d;
-        }
-
-        
-        @media (max-width: 600px) {
-            .seccion-permisos { grid-template-columns: 1fr; }
-        }
+.contenedor-seguridad {
+	background: rgba(123, 44, 191, 0.1);
+	max-width: 800px;
+	padding: 40px;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	margin: 50px auto;
+	border: 1px solid rgba(157, 78, 221, 0.2);
+	backdrop-filter: blur(5px);
+}
 
 
-        .grid-cuidados {
-            background: rgba(123, 44, 191, 0.1);
-            max-width: 800px;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            margin: 50px auto;
-            border: 1px solid rgba(157, 78, 221, 0.2);
-            backdrop-filter: blur(5px);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-         }
+.intro {
+	text-align: center;
+	font-size: 1.3rem;
+	color: #b491ee;
+	margin-bottom: 40px;
+}
+
+.seccion-permisos {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.tarjeta-permiso {
+	background: rgba(123, 44, 191, 0.1);
+	padding: 20px;
+	border-radius: 15px;
+	border-left: 5px solid var(--verde-profundo);
+	transition: transform 0.3s ease;
+}
+
+.tarjeta-permiso:hover {
+	transform: scale(1.02);
+}
+
+.tarjeta-permiso h3 {
+	font-family: 'Architects Daughter', cursive;
+	margin-top: 0;
+    font-size: 24px;
+    text-shadow: var(--p-texto-sombra);
+	color: var(--verde-profundo);
+}
+
+.muro-frases {
+	margin-top: 40px;
+	background: #c28cc7;
+	padding: 25px;
+	border-radius: 15px;
+	text-align: center;
+	border: 1px dashed #fbc02d;
+}
+
+
+@media (max-width: 600px) {
+	.seccion-permisos {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+.grid-cuidados {
+	background: rgba(123, 44, 191, 0.1);
+	max-width: 800px;
+	padding: 40px;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	margin: 50px auto;
+	border: 1px solid rgba(157, 78, 221, 0.2);
+	backdrop-filter: blur(5px);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
 
 .grid-cuidados:hover {
-            transform: scale(1.02);
-        }
-        .item-cuidado {
-        font-family: 'Architects Daughter', cursive;
-            margin-top: 0;
-            color: var(--verde-profundo);
-            text-shadow: #000;
-         }
+	transform: scale(1.02);
+}
 
-        .item-cuidado:hover {
-             transform: scale(1.02);
-        }
+.item-cuidado {
+	font-family: 'Architects Daughter', cursive;
+	margin-top: 0;
+	color: var(--verde-profundo);
+	text-shadow: #000;
+}
 
- h3 {
-            text-align: center;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.849);
-            font-size: 1.3rem;
-            color: #cf4188
-        
-        }
+.item-cuidado:hover {
+	transform: scale(1.02);
+}
 
-        .item-cuidado p {
-            font-size: 1.2rem;
-            line-height: 1.4;
-            margin-bottom: 0;
-        }
+.donation-box h3 {
+	text-align: center;
+	font-size: 23px;
+	color: #cf4188;
+    text-shadow: var(--p-texto-sombra);
+}
 
-        .mensaje-final {
-            margin-top: 40px;
-            padding: 20px;
-            text-align: center;
-            background: #4d50e4;
-            border-radius: 15px;
-            font-size: 1.3rem;
-            border: 1px dashed #fbc02d;
-        }
+.item-cuidado p {
+	font-size: 1.2rem;
+	line-height: 1.4;
+	margin-bottom: 0;
+}
 
-
-        @media (max-width: 600px) {
-            .grid-cuidados { grid-template-columns: 1fr; }
-            .cuadro-spa { padding: 25px; }
-        } 
+.mensaje-final {
+	margin-top: 40px;
+	padding: 20px;
+	text-align: center;
+	background: #4d50e4;
+	border-radius: 15px;
+	font-size: 1.3rem;
+	border: 1px dashed #fbc02d;
+}
 
 
-    /* =========================================
+@media (max-width: 600px) {
+	.grid-cuidados {
+		grid-template-columns: 1fr;
+	}
+
+	.cuadro-spa {
+		padding: 25px;
+	}
+}
+
+
+/* =========================================
    RETO 21 DIAS
    ========================================= */
-       
-              
+
+
 /* Checkboxes Estilo Neón */
 .routine-list input[type="checkbox"] {
-    accent-color: var(--color-principal);
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    filter: drop-shadow(0 0 5px var(--color-principal));
+	accent-color: var(--color-principal);
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	filter: drop-shadow(0 0 5px var(--color-principal));
 }
 
 /* El Acto del Día resaltado */
 .acto-del-dia {
-    background: rgba(184, 51, 182, 0.1);
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px dashed var(--color-secundario);
+	background: rgba(184, 51, 182, 0.1);
+	padding: 10px;
+	border-radius: 8px;
+	border: 1px dashed var(--color-secundario);
+}
+
+.rotacion {
+    animation: 3.5s rotacion infinite;
+}
+
+@keyframes rotacion {
+    0% {
+        transform: rotate(-8deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(-8deg);
+    }
+}
+
+.boom {
+    animation: 3.5s boom infinite;
+}
+
+@keyframes boom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
