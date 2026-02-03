@@ -19,7 +19,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     background-color: var(--color-fondo);
-    background-image: url(/fondo2.jpg);
+    background-image: url(./img/fondo2.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -71,25 +71,25 @@ header h1 {
 }
  .gracias{
     background-color: var(--color-fondo);
-    background-image: url(/gracias.png);
+    background-image: url(./img/gracias.png);
     background-size: contain;
 }
 
 .notasAdmiracion{
     background-color: var(--color-fondo);
-    background-image: url(/cartas.png);
+    background-image: url(./img/cartas.png);
     background-size: contain;
 }
 
 .cuidadoPersonal{
     background-color: var(--color-fondo);
-    background-image: url(/cuidadoPersonal.png);
+    background-image: url(./img/cuidadoPersonal.png);
     background-size: contain;
 }
 
 .sendero{
     background-color: var(--color-fondo);
-    background-image: url(/sendero.png);
+    background-image: url(./img/senderoo.png);
     background-size: contain;
 }
 
