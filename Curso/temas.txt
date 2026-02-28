@@ -1,0 +1,8 @@
+margin vs padding, direciones y etiquetas class style=
+font-size vw vs px, font-weight line-height letter-spacing, br
+font-family @font-face text-shadow text-transform color
+border-radius, width, background, border
+photopea, cambios de color, fondo, compresión
+animaciones, transform,translateY,translateX, scale, hue-rotate, saturation, filter: brightness(1);filter: blur(5px);
+Proyecto Final
+https://invitacioninfantil.com/DEMOS/Matilda/Info-Fiesta/set.css?cambiame=porfavor
