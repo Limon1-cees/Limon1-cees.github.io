@@ -463,6 +463,7 @@ body{
   font-size: 25px;
   letter-spacing: 2px;
   color: rgb(136, 9, 51);
+  text-shadow: none !important;
   animation: izquierda 2.4s ease-in-out infinite, filtro 3.9s ease-in-out infinite;
 }
 
