@@ -1,8 +1,50 @@
-margin vs padding, direciones y etiquetas class style=
-font-size vw vs px, font-weight line-height letter-spacing, br
-font-family @font-face text-shadow text-transform color
-border-radius, width, background, border
-photopea, cambios de color, fondo, compresión
-animaciones, transform,translateY,translateX, scale, hue-rotate, saturation, filter: brightness(1);filter: blur(5px);
-Proyecto Final
+1) Guía detallada por unidad (propiedades y propósito)
+Unidad 1 — Box Model y formas
+width: define el ancho del elemento.
+margin: espacio por fuera del borde (separa elementos entre sí).
+padding: espacio por dentro del borde (separa contenido del borde).
+border: contorno del elemento (grosor, estilo, color).
+border-radius: redondea esquinas (cuadrado → redondeado → pill).
+background / background-color: fondo del elemento (color/gradiente).
+
+Unidad 2 — Tipografía base
+font-size: tamaño del texto (en px, vw, etc.).
+font-weight: grosor (peso) del texto (400 normal, 700 bold, etc.).
+line-height: altura de línea (espaciado vertical entre renglones).
+letter-spacing: separación entre letras (tracking).
+text-transform: transforma texto (uppercase, lowercase, etc.).
+color: color del texto.
+text-shadow (si lo introduces aquí también): sombras para profundidad/contraste.
+
+Unidad 3 — Unidades: px vs vw (y text-shadow)
+px: unidad fija (misma medida sin importar pantalla). Útil en detalles finos.
+vw: 1vw = 1% del ancho de la ventana. Útil para títulos responsivos y elementos que “escalan”.
+text-shadow: capas de sombras para separar el texto del fondo y dar volumen.
+
+Unidad 4 — Transform + Filters (foto)
+transform: translateX/Y: mueve el elemento (sin afectar el flujo).
+transform: rotate(): rota el elemento.
+transform: scale(): escala el elemento.
+filter: saturate(): sube/baja intensidad de color.
+filter: brightness(): sube/baja brillo.
+filter: blur(): desenfoque (útil para “soft focus”).
+filter combinado: puedes encadenar varios: filter: saturate(1.2) brightness(1.1) blur(1px).
+
+Unidad 5 — Animations (CSS)
+@keyframes: define estados de una animación (0% → 100%).
+animation-name: qué keyframes usar.
+animation-duration: cuánto dura.
+animation-timing-function: ritmo (linear, ease-in-out, etc.).
+animation-iteration-count: cuántas repeticiones (infinite para bucle).
+animation-direction: normal / alternate (ida y vuelta).
+animation-fill-mode: cómo se comporta antes/después (no siempre necesario al inicio).
+
+Unidad 6 — Proyecto final (integración)
+Formas con color + texto interno.
+3 animaciones distintas en bucle “sin corte”:
+Cuadrado: arriba/abajo
+Rectángulo: izquierda/derecha + rotación leve
+Círculo: arriba/abajo + giro 360
+Micro-efecto con filter para dar vida (opcional, pero queda pro).
+
 https://invitacioninfantil.com/DEMOS/Matilda/Info-Fiesta/set.css?cambiame=porfavor
