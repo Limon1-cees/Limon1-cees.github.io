@@ -2,192 +2,279 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta property="og:title" content="Curso Básico">
-  <meta property="og:description" content="Fundamentos para trabajar">
-  <meta property="og:image" content="https://limon1-cees.github.io/Curso/foto.jpg">
+  <meta property="og:title" content="Curso Básico de CSS" />
+  <meta property="og:description" content="Fundamentos esenciales de HTML y CSS para construir interfaces: cajas, tipografía, unidades, filtros y animaciones." />
+  <meta property="og:image" content="https://limon1-cees.github.io/Curso/foto.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Laboratorio CSS — Formas, Tipografía y Animaciones</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="top">
-    <div class="wrap">
-      <h1 class="top__title">Laboratorio de CSS</h1>
-      <p class="top__subtitle">
-        Ejercicios para practicar: box model, tipografía, px vs vw, sombras, transforms, filtros y animaciones en CSS.
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <h1 class="titulo-principal">Laboratorio de CSS</h1>
+      <p class="subtitulo-principal">
+        Esta web funciona como guía de estudio y guía de ejercicios. Aquí verás ejemplos y definiciones de cada concepto.
       </p>
     </div>
   </header>
 
-  <main class="wrap">
+  <main class="contenedor">
 
-    <!-- Unidad 1 -->
-    <section class="card" id="unidad-1">
-      <h2 class="h2">Unidad 1) Box Model: width, margin, padding, border, radius, background</h2>
+    <!-- MARK: Guía rápida de conceptos -->
+    <section class="seccion">
+      <h2 class="titulo-seccion">Guía rápida de conceptos (qué es y para qué sirve)</h2>
 
-      <div class="demo-row">
-        <div class="caja caja-roja">
-          <p class="caja__label">Caja Roja</p>
-          <p class="caja__desc">Borde, padding, fondo y radio.</p>
+      <div class="guia">
+        <div class="tarjeta">
+          <h3 class="titulo-tarjeta">Box Model</h3>
+          <ul class="lista">
+            <li><b>width</b>: ancho del elemento.</li>
+            <li><b>margin</b>: espacio por fuera del borde (separa elementos).</li>
+            <li><b>padding</b>: espacio por dentro del borde (separa contenido del borde).</li>
+            <li><b>border</b>: contorno del elemento (grosor/estilo/color).</li>
+            <li><b>border-radius</b>: redondea esquinas.</li>
+            <li><b>background</b>: pinta el fondo (color o degradado).</li>
+          </ul>
         </div>
 
-        <div class="caja caja-verde">
-          <p class="caja__label">Caja Verde</p>
-          <p class="caja__desc">Otra combinación de borde/radius.</p>
+        <div class="tarjeta">
+          <h3 class="titulo-tarjeta">Tipografía</h3>
+          <ul class="lista">
+            <li><b>font-size</b>: tamaño de letra (px, vw, etc.).</li>
+            <li><b>font-weight</b>: grosor del texto (400, 700, etc.).</li>
+            <li><b>line-height</b>: altura entre líneas (legibilidad).</li>
+            <li><b>letter-spacing</b>: separación entre letras (tracking).</li>
+            <li><b>text-transform</b>: convierte texto (uppercase, etc.).</li>
+            <li><b>color</b>: color del texto.</li>
+            <li><b>text-shadow</b>: sombra para contraste/profundidad.</li>
+          </ul>
         </div>
 
-        <div class="caja caja-dorada">
-          <p class="caja__label">Caja Dorada</p>
-          <p class="caja__desc">Ejemplo con degradado (background).</p>
+        <div class="tarjeta">
+          <h3 class="titulo-tarjeta">Unidades</h3>
+          <ul class="lista">
+            <li><b>px</b>: tamaño fijo (no depende de la pantalla).</li>
+            <li><b>vw</b>: tamaño relativo al ancho de la ventana (1vw = 1%).</li>
+            <li><b>¿Cuándo usar?</b> px para detalles; vw para títulos que escalan.</li>
+          </ul>
+        </div>
+
+        <div class="tarjeta">
+          <h3 class="titulo-tarjeta">Transform</h3>
+          <ul class="lista">
+            <li><b>translateX/Y</b>: mueve el elemento sin romper el layout.</li>
+            <li><b>scale</b>: aumenta o reduce tamaño.</li>
+            <li><b>rotate</b>: rota el elemento.</li>
+          </ul>
+        </div>
+
+        <div class="tarjeta">
+          <h3 class="titulo-tarjeta">Filters (filtros)</h3>
+          <ul class="lista">
+            <li><b>saturate()</b>: sube o baja intensidad de color.</li>
+            <li><b>brightness()</b>: sube o baja brillo.</li>
+            <li><b>blur()</b>: desenfoca.</li>
+            <li><b>Se pueden combinar</b>: filter: saturate() brightness() blur().</li>
+          </ul>
+        </div>
+
+        <div class="tarjeta">
+          <h3 class="titulo-tarjeta">Animations</h3>
+          <ul class="lista">
+            <li><b>@keyframes</b>: define los pasos de una animación.</li>
+            <li><b>animation-duration</b>: duración.</li>
+            <li><b>animation-timing-function</b>: ritmo (linear, ease-in-out).</li>
+            <li><b>animation-iteration-count</b>: repeticiones (infinite).</li>
+            <li><b>Loop sin corte</b>: 0% y 100% deben “cerrar” parecido.</li>
+          </ul>
+        </div>
+
+        <div class="tarjeta">
+          <h3 class="titulo-tarjeta">Font-face</h3>
+          <ul class="lista">
+            <li><b>@font-face</b>: permite cargar una fuente local (archivo).</li>
+            <li><b>font-family</b>: nombre con el que la usarás en CSS.</li>
+            <li><b>src</b>: ruta del archivo (ej: ./fonts/LEMON.otf).</li>
+            <li><b>Uso</b>: font-family: "LEMON";</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: Unidad 1 -->
+    <section class="seccion" id="unidad-1">
+      <h2 class="titulo-seccion">Unidad 1) Box Model (cajas con color)</h2>
+
+      <div class="fila">
+        <div class="caja roja">
+          <p class="texto-caja">Caja Roja</p>
+          <p class="texto-mini">border / padding / radius</p>
+        </div>
+
+        <div class="caja verde">
+          <p class="texto-caja">Caja Verde</p>
+          <p class="texto-mini">margin / border / pill</p>
+        </div>
+
+        <div class="caja dorada">
+          <p class="texto-caja">Caja Dorada</p>
+          <p class="texto-mini">background gradient</p>
         </div>
       </div>
 
-      <div class="task">
-        <p class="task__t">Tarea</p>
-        <p class="task__d">
+      <div class="tarea">
+        <p class="titulo-tarea">Tarea</p>
+        <p class="texto-tarea">
           Crea 3 tarjetas (cuadrada, redondeada, pill) que se vean diferentes solo con box model.
-          <strong>Twist:</strong> simula un doble borde (outline o box-shadow).
+          <b>Twist:</b> simula un doble borde (outline o box-shadow).
         </p>
       </div>
     </section>
 
-    <!-- Unidad 2 -->
-    <section class="card" id="unidad-2">
-      <h2 class="h2">Unidad 2) Tipografía: size, weight, line-height, letter-spacing, transform, color</h2>
+    <!-- MARK: Unidad 2 -->
+    <section class="seccion" id="unidad-2">
+      <h2 class="titulo-seccion">Unidad 2) Tipografía + Font-face</h2>
 
-      <div class="type-demo">
-        <p class="type-demo__kicker">Ejemplo</p>
-        <h3 class="type-demo__title">Texto que se siente “premium”</h3>
-        <p class="type-demo__body">
-          Ajusta tamaño, peso y line-height para legibilidad. El letter-spacing cambia el ritmo visual.
+      <div class="tipografia">
+        <p class="etiqueta">Antes (fuente del sistema)</p>
+        <h3 class="titulo-sistema">Título con fuente del sistema</h3>
+
+        <p class="etiqueta">Después (font-face)</p>
+        <h3 class="titulo-lemon">Título con LEMON (font-face)</h3>
+
+        <p class="parrafo">
+          Aquí practicamos font-size, font-weight, line-height, letter-spacing, text-transform, color y text-shadow.
         </p>
-        <p class="type-demo__tag">text-transform: uppercase</p>
+
+        <p class="badge">EJEMPLO: text-transform: uppercase</p>
       </div>
 
-      <div class="task">
-        <p class="task__t">Tarea</p>
-        <p class="task__d">
-          Crea un “bloque de marca” (título, subtítulo y badge) en 2 estilos: elegante y divertido.
-          <strong>Twist:</strong> solo puedes cambiar tipografía y color (sin tocar layout).
+      <div class="tarea">
+        <p class="titulo-tarea">Tarea</p>
+        <p class="texto-tarea">
+          Crea un bloque tipográfico con 2 estilos: elegante y divertido.
+          <b>Twist:</b> usa font-face y haz que el estilo “divertido” se logre solo con tipografía y color.
         </p>
       </div>
     </section>
 
-    <!-- Unidad 3 -->
-    <section class="card" id="unidad-3">
-      <h2 class="h2">Unidad 3) px vs vw + text-shadow</h2>
+    <!-- MARK: Unidad 3 -->
+    <section class="seccion" id="unidad-3">
+      <h2 class="titulo-seccion">Unidad 3) px vs vw + text-shadow</h2>
 
-      <div class="px-vw">
-        <div class="px-vw__col col-azul">
-          <p class="px-vw__kicker">A) Con px (fijo)</p>
-          <p class="px-vw__title titulo-px">Título en px</p>
-          <p class="px-vw__desc">Este título casi no cambia al ajustar el ancho de la ventana.</p>
+      <div class="comparacion">
+        <div class="columna azul">
+          <p class="etiqueta">A) px (fijo)</p>
+          <p class="titulo-px">Título en px</p>
+          <p class="parrafo-mini">Se mantiene parecido aunque cambie el tamaño de la ventana.</p>
         </div>
 
-        <div class="px-vw__col col-morado">
-          <p class="px-vw__kicker">B) Con vw (responsivo)</p>
-          <p class="px-vw__title titulo-vw">Título en vw</p>
-          <p class="px-vw__desc">Este título escala con el ancho de la ventana (1vw = 1% del ancho).</p>
+        <div class="columna morado">
+          <p class="etiqueta">B) vw (responsivo)</p>
+          <p class="titulo-vw">Título en vw</p>
+          <p class="parrafo-mini">Cambia con el ancho de la ventana: 1vw = 1%.</p>
         </div>
       </div>
 
-      <div class="task">
-        <p class="task__t">Tarea</p>
-        <p class="task__d">
-          Replica este comparativo: crea 2 títulos iguales, uno en px y otro en vw.
-          <strong>Twist:</strong> agrega 3 capas de text-shadow al título vw sin que se vea exagerado.
+      <div class="tarea">
+        <p class="titulo-tarea">Tarea</p>
+        <p class="texto-tarea">
+          Replica esta comparación con tus propios colores.
+          <b>Twist:</b> agrega 3 capas de text-shadow solo al título en vw.
         </p>
       </div>
     </section>
 
-    <!-- Unidad 4 -->
-    <section class="card" id="unidad-4">
-      <h2 class="h2">Unidad 4) Transform + Filters (ejemplo.jpg)</h2>
+    <!-- MARK: Unidad 4 -->
+    <section class="seccion" id="unidad-4">
+      <h2 class="titulo-seccion">Unidad 4) Transform + Filters (ejemplo.jpg)</h2>
 
-      <div class="laboratorio-fotos">
-        <figure class="tarjeta-foto">
+      <div class="fotos">
+        <figure class="marco">
           <img class="imagen imagen-1" src="ejemplo.jpg" alt="Imagen 1" />
-          <figcaption class="texto-foto">Imagen 1 (original)</figcaption>
+          <figcaption class="pie">Imagen 1 (original)</figcaption>
         </figure>
 
-        <figure class="tarjeta-foto">
+        <figure class="marco">
           <img class="imagen imagen-2" src="ejemplo.jpg" alt="Imagen 2" />
-          <figcaption class="texto-foto">Imagen 2 (saturación + brillo)</figcaption>
+          <figcaption class="pie">Imagen 2 (saturate + brightness)</figcaption>
         </figure>
 
-        <figure class="tarjeta-foto">
+        <figure class="marco">
           <img class="imagen imagen-3" src="ejemplo.jpg" alt="Imagen 3" />
-          <figcaption class="texto-foto">Imagen 3 (blur + ajustes)</figcaption>
+          <figcaption class="pie">Imagen 3 (blur + ajustes)</figcaption>
         </figure>
       </div>
 
-      <div class="mini-transform">
-        <div class="fichita mueve">translate</div>
-        <div class="fichita rota">rotate</div>
-        <div class="fichita escala">scale</div>
+      <div class="fila">
+        <div class="ficha mueve">translate</div>
+        <div class="ficha rota">rotate</div>
+        <div class="ficha escala">scale</div>
       </div>
 
-      <div class="task">
-        <p class="task__t">Tarea</p>
-        <p class="task__d">
-          Usa foto.jpg para crear 3 versiones: original, “viva” (saturate/brightness) y “suave” (blur).
-          <strong>Twist:</strong> agrega una animación MUY sutil a una foto (micro-brillo cíclico con filter).
+      <div class="tarea">
+        <p class="titulo-tarea">Tarea</p>
+        <p class="texto-tarea">
+          Crea 3 versiones de la foto con filtros distintos.
+          <b>Twist:</b> anima muy sutilmente el filtro de una imagen (micro pulso) sin que “parpadee”.
         </p>
       </div>
     </section>
 
-    <!-- Unidad 5 -->
-    <section class="card" id="unidad-5">
-      <h2 class="h2">Unidad 5) Animations: @keyframes + animation</h2>
+    <!-- MARK: Unidad 5 -->
+    <section class="seccion" id="unidad-5">
+      <h2 class="titulo-seccion">Unidad 5) Animaciones (CSS)</h2>
 
-      <div class="anim-row">
-        <div class="anim-sample anim-sample--float">Flotar</div>
-        <div class="anim-sample anim-sample--wobble">Aleteo</div>
-        <div class="anim-sample anim-sample--pulse">Filtro</div>
+      <div class="fila">
+        <div class="muestra flotar">Flotar</div>
+        <div class="muestra aletear">Aleteo</div>
+        <div class="muestra pulso">Filtro</div>
       </div>
 
-      <div class="task">
-        <p class="task__t">Tarea</p>
-        <p class="task__d">
-          Crea 2 animaciones: flotación vertical suave y oscilación horizontal con leve rotación.
-          <strong>Twist:</strong> agrega una micro-animación con filter (brightness/saturate) sin marear.
+      <div class="tarea">
+        <p class="titulo-tarea">Tarea</p>
+        <p class="texto-tarea">
+          Crea 2 animaciones: flotación suave y oscilación con rotación leve.
+          <b>Twist:</b> agrega una animación con filter (brillo o saturación) sin marear.
         </p>
       </div>
     </section>
 
-    <!-- Unidad 6 -->
-    <section class="card card--final" id="unidad-6">
-      <h2 class="h2">Unidad 6) Proyecto final: escena con 3 figuras animadas</h2>
+    <!-- MARK: Unidad 6 -->
+    <section class="seccion final" id="unidad-6">
+      <h2 class="titulo-seccion">Unidad 6) Proyecto final (3 figuras animadas)</h2>
 
-      <div class="final">
-        <div class="final__text">
-          <p class="final__kicker">Proyecto final</p>
-          <h3 class="final__title">Cuadrado, círculo y rectángulo animados</h3>
-          <p class="final__body">
-            Todo es animación en CSS (sin hover): cada figura tiene color distinto y una animación diferente.
+      <div class="final-grid">
+        <div>
+          <p class="etiqueta">Proyecto final</p>
+          <h3 class="titulo-final">Cuadrado, círculo y rectángulo</h3>
+          <p class="parrafo">
+            Cada figura tiene su color, su texto dentro y su animación en bucle (sin hover).
           </p>
 
-          <div class="task">
-            <p class="task__t">Tarea final</p>
-            <p class="task__d">
-              Replica la escena final a tu estilo (posiciones, tamaños, colores y ritmo).
-              <strong>Twist:</strong> agrega 2 figuras nuevas con su propio movimiento (sin copiar las animaciones existentes).
+          <div class="tarea">
+            <p class="titulo-tarea">Tarea final</p>
+            <p class="texto-tarea">
+              Replica la escena final a tu estilo.
+              <b>Twist:</b> agrega 2 figuras nuevas con animaciones propias (no copies las existentes).
             </p>
           </div>
         </div>
 
-        <div class="scene" aria-label="Escena final de formas animadas">
-          <div class="shape square"><span class="shape__txt">Cuadrado</span></div>
-          <div class="shape circle"><span class="shape__txt">Círculo</span></div>
-          <div class="shape rect"><span class="shape__txt">Rectángulo</span></div>
-          <div class="scene__grid"></div>
+        <div class="escena" aria-label="Escena final">
+          <div class="figura cuadrado"><span>Cuadrado</span></div>
+          <div class="figura circulo"><span>Círculo</span></div>
+          <div class="figura rectangulo"><span>Rectángulo</span></div>
+          <div class="rejilla"></div>
         </div>
       </div>
     </section>
 
-    <footer class="foot">
-      <p>Proyecto 100% HTML + CSS. Asegúrate de poner foto.jpg junto al index.</p>
+    <footer class="pie-final">
+      <p>Proyecto 100% HTML + CSS. Coloca foto.jpg junto al index y la fuente en /fonts/LEMON.otf</p>
     </footer>
 
   </main>
